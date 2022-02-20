@@ -33,7 +33,7 @@ const Meta = ({ title, url, description, keywords, image }) => {
 Meta.defaultProps = {
 	title: 'Titanbornes',
 	url: 'https://titanbornes.com',
-	description: 'NFT Analytics Platform',
+	description: 'Experimental NFT Project',
 	keywords: 'blockchain, cryptocurrency, NFTs',
 	image: 'https://user-images.githubusercontent.com/45223699/151791982-78605257-20fb-49af-9d3e-08d324f98b25.png',
 }

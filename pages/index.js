@@ -31,8 +31,7 @@ const Index = () => {
 						</span>
 					</Text>
 					<Text type="secondary" small>
-						Titanbornes is a DeFi Assistant we all need. Simple as
-						that...
+						Titanbornes is an experimental NFT Project...
 					</Text>
 				</div>
 			</div>
@@ -51,7 +50,7 @@ const Index = () => {
 									draggable={false}
 								/>
 								<Text h6 my={0}>
-									Demon #666
+									Reapers Titanbornes
 								</Text>
 								<Text type="secondary" small>
 									Fusion Count: 0
@@ -71,7 +70,7 @@ const Index = () => {
 									draggable={false}
 								/>
 								<Text h6 my={0}>
-									Demon Hunter #117
+									Tricksters Titanbornes
 								</Text>
 								<Text type="secondary" small>
 									Fusion Count: 3
