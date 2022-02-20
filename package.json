@@ -1,0 +1,36 @@
+{
+	"name": "titanbornes-next",
+	"author": "Accretence",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"stop": "taskkill -F -IM node.exe",
+		"update": "npx npm-check-updates -u"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^1.2.36",
+		"@fortawesome/free-brands-svg-icons": "^5.15.4",
+		"@fortawesome/free-regular-svg-icons": "^5.15.4",
+		"@fortawesome/free-solid-svg-icons": "^5.15.4",
+		"@fortawesome/react-fontawesome": "^0.1.15",
+		"@geist-ui/react": "^2.2.0",
+		"axios": "^0.21.1",
+		"ethers": "^5.4.6",
+		"keccak256": "^1.0.6",
+		"merkletreejs": "^0.2.27",
+		"next": "^11.1.4",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-usestateref": "^1.0.5",
+		"swr": "^1.0.1",
+		"web3": "^1.5.2"
+	},
+	"devDependencies": {
+		"eslint": "7.32.0",
+		"eslint-config-next": "11.1.2"
+	}
+}
