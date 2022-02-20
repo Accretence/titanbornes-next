@@ -1,5 +1,4 @@
 import { ethers } from 'ethers'
-import { getContractABI } from './getContractABI'
 
 const contractABI = require('../data/Titanbornes.json')
 

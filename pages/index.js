@@ -13,7 +13,7 @@ import {
 	Text,
 	Display,
 	Description,
-} from '@geist-ui/react'
+} from '@geist-ui/core'
 
 const Index = () => {
 	const theme = useTheme()

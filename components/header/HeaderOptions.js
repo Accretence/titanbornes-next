@@ -10,7 +10,7 @@ import {
 	Link as GeistLink,
 	useTheme,
 	Popover,
-} from '@geist-ui/react'
+} from '@geist-ui/core'
 
 // Components
 import UserPopover from './UserPopover'
@@ -26,8 +26,13 @@ import { ProviderContext } from '../../state/context/providerContext'
 const HeaderOptions = () => {
 	// Hooks
 	const theme = useTheme()
-	const [, setToast] = useToasts()
-
+	const {
+			toasts,
+			setToast,
+			removeAll,
+			findToastOneByID,
+			removeToastOneByID,
+		} = useToasts()
 	// Local State
 	const [sticky, setSticky] = useState(false)
 	const [metamaskAvailable, setMetamaskAvailable] = useState(false)

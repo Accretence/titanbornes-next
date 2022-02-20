@@ -8,7 +8,7 @@ import {
 	useTheme,
 	Spacer,
 	Divider,
-} from '@geist-ui/react'
+} from '@geist-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {

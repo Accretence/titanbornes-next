@@ -20,7 +20,7 @@ import {
 	Link as GeistLink,
 	Spacer,
 	Card,
-} from '@geist-ui/react'
+} from '@geist-ui/core'
 
 // Context
 import { ProviderContext } from '../state/context/providerContext'
@@ -31,7 +31,13 @@ import { getContract } from '../hooks/getContract'
 const Mint = () => {
 	let contract
 	const theme = useTheme()
-	const [, setToast] = useToasts()
+	const {
+		toasts,
+		setToast,
+		removeAll,
+		findToastOneByID,
+		removeToastOneByID,
+	} = useToasts()
 
 	const [metamaskAvailable, setMetamaskAvailable] = useState(false)
 	const [whitelistChecked, setWhitelistChecked, whitelistCheckedRef] =

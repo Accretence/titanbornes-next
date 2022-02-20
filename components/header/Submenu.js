@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 import HeaderOptions from './HeaderOptions'
 
-import { Tabs, useTheme } from '@geist-ui/react'
+import { Tabs, useTheme } from '@geist-ui/core'
 
 const Submenu = () => {
 	const router = useRouter()

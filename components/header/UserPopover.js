@@ -1,13 +1,19 @@
 import React, { useContext } from 'react'
 
 // Libraries
-import { useToasts, Button, Popover, Description } from '@geist-ui/react'
+import { useToasts, Button, Popover, Description } from '@geist-ui/core'
 
 // Global State
 import { ProviderContext } from '../../state/context/providerContext'
 
 const UserPopover = () => {
-	const [, setToast] = useToasts()
+	const {
+		toasts,
+		setToast,
+		removeAll,
+		findToastOneByID,
+		removeToastOneByID,
+	} = useToasts()
 	const { provider, setProvider } = useContext(ProviderContext)
 
 	async function callDisconnect() {

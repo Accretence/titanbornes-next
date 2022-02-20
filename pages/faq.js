@@ -13,7 +13,7 @@ import {
 	Link as GeistLink,
 	Spacer,
 	Card,
-} from '@geist-ui/react'
+} from '@geist-ui/core'
 
 const FAQ = () => {
 	const theme = useTheme()

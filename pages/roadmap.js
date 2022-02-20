@@ -13,7 +13,7 @@ import {
 	Spacer,
 	Card,
 	Description,
-} from '@geist-ui/react'
+} from '@geist-ui/core'
 
 const Roadmap = () => {
 	const theme = useTheme()

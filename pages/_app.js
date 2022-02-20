@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 
 // Libraries
-import { GeistProvider, CssBaseline } from '@geist-ui/react'
+import { GeistProvider, CssBaseline } from '@geist-ui/core'
 import { ethers } from 'ethers'
 
 // Global State
