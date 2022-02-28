@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import {
 	useTheme,
 	Text,
+	Badge,
 	Image,
 	Link as GeistLink,
 	Spacer,
@@ -31,27 +32,97 @@ const FAQ = () => {
 			</div>
 			<div className="PageWrapper">
 				<div className="PageContent">
-					<Card mt={5} mb={1} className="WikiContent">
+					<Card mt={4} mb={1} className="WikiContent">
 						<Text h3>What is Titanbornes?</Text>
 						<Text small>
-							Titanbornes is a suite of automation tools, information
-							metrics, insights and notification systems to give
-							you an edge in the market.
+							Experimental NFT Collection trying to do things a little differently. What if your NFT evolved in each transaction? What if a collection's supply dropped after every transaction?
+						</Text>
+					</Card>
+					<Card mb={1} className="WikiContent">
+						<Text h3>
+							How does this 👆 work?
+						</Text>
+						<Text small>
+							Each single sale in this collection can trigger a FUSION, upgrading the buyer's NFT & burning the sold NFT. This decreases the entire supply of the collection and raises the rarity of all NFTs still in circulation. This is deflationary-supply taken to the extreme!
+						</Text>
+					</Card>
+					<Card mb={1} className="WikiContent">
+						<Text h3>
+							What is the total supply?
+						</Text>
+						<Text small>
+							4,000.
+						</Text>
+					</Card>
+					<Card mb={1} className="WikiContent">
+						<Text h3>
+							What is the minting price?
+						</Text>
+						<Text small>
+							0.08 ETH. The mint will be FREE for top %10 of Whitelisted players in each faction's leaderboard.
+						</Text>
+					</Card>
+					<Card mb={1} className="WikiContent">
+						<Text h3>
+							How many can I mint?
+						</Text>
+						<Text small>
+							One.
+						</Text>
+					</Card>
+					<Card mb={1} className="WikiContent">
+						<Text h3>
+							When can I mint?
+						</Text>
+						<Text small>
+							~ 48 hours after 4,000 ICHOR points is mined collectively by both Reapers and Tricksters factions in our Discord game.
+						</Text>
+					</Card>
+					<Card mb={1} className="WikiContent">
+						<Text h3>
+							What blockchain?
+						</Text>
+						<Text small>
+							Ethereum.
+						</Text>
+					</Card>
+					<Card mb={1} className="WikiContent">
+						<Text h3>
+							What are the whitelist & public sale allocations?
+						</Text>
+						<Text small>
+							All 4,000 tokens will be available to mint by Whitelisted members in a 24h window, after which any unminted supply will be available to mint publicly.
+						</Text>
+					</Card>
+					<Card mb={1} className="WikiContent">
+						<Text h3>
+							How do I earn a whitelist position?
+						</Text>
+						<Text small>
+							Check-out whitelist to learn how to become Whitelisted.
+						</Text>
+					</Card>
+					<Card mb={1} className="WikiContent">
+						<Text h3>
+							Will my NFT have the same faction as my Discord role?
+						</Text>
+						<Text small>
+							Yes, but only if you're <Badge
+								style={{
+									backgroundColor: 'yellowgreen',
+									color: 'white',
+								}}
+							>
+								Whitelisted
+							</Badge> and mint in the 24h presale window.
 						</Text>
 					</Card>
 					<Card className="WikiContent">
 						<Text h3>
-							Why do I need a Metamask Wallet to login?
+							Will friends that I invite join my faction?
 						</Text>
 						<Text small>
-							All of the assets on our platform are Ethereum NFTs
-							( Non-Fungible Tokens ) so in order to interact with
-							them you need an Ethereum Blockchain Address.
-							Metamask is the most versatile Ethereum Wallet that
-							lets DApps ( Decentralized Applications ) like our
-							Web Application to securely connect with your
-							Ethereum Address without the need to exchange any
-							sensitive information.
+							Yes.
 						</Text>
 					</Card>
 				</div>
@@ -89,8 +160,7 @@ const FAQ = () => {
 					#WikiHeader li::marker {
 						color: skyblue!important;
 						font-size: 0.8rem!important;
-					}`
-				}
+					}`}
 			</style>
 		</>
 	)

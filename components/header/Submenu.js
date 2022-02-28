@@ -31,9 +31,12 @@ const Submenu = () => {
 								label={sticky ? 'TITANBORNES' : 'HOME'}
 								value="/"
 							/>
-							<Tabs.Item label="MINT" value="/mint" />
-							<Tabs.Item label="ROADMAP" value="/roadmap" />
 							<Tabs.Item label="FAQ" value="/faq" />
+							<Tabs.Item label="ROADMAP" value="/roadmap" />
+							<Tabs.Item label="FUSION" value="/fusion" />
+							<Tabs.Item label="WHITELIST" value="/whitelist" />
+							<Tabs.Item label="LORE" value="/lore" />
+							<Tabs.Item label="TECH" value="/tech" />
 						</Tabs>
 						<div className="headerOptions">
 							{sticky && <HeaderOptions />}

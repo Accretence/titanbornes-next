@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import {
 	useTheme,
 	Text,
+	Badge,
 	Image,
 	Spacer,
 	Card,
@@ -17,6 +18,7 @@ import {
 
 const Roadmap = () => {
 	const theme = useTheme()
+
 	return (
 		<>
 			<Meta title="Roadmap" />
@@ -27,203 +29,78 @@ const Roadmap = () => {
 
 					<Text small>
 						Here you will find an itemized list of upcoming features
-						and projects we are working on.
+						we are working on.
 					</Text>
 				</div>
 			</div>
 			<Spacer />
 			<div className="PageWrapper">
 				<div className="PageContent">
-					<Card>
-						<Description
-							title="Step 01"
-							content={
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'space-between',
-									}}
-								>
-									<div>
-										[Early Access Release] Single Player
-										Mode Free Roam
-									</div>
-									<div style={{ color: 'skyblue' }}>
-										Status: Implemented
-									</div>
-								</div>
-							}
-						/>
+					<Card mb={1} className="WikiContent">
+						<Text h3>Chapter 00: Prologue</Text>
+						<Text small>
+							Original Discord game built from scratch to
+							gradually introduce you to Titanbornes' lore and
+							fairly distribute whitelist spots. Only those who
+							are genuinely interested will earn their spot in
+							this community.
+						</Text>
 					</Card>
-					<Spacer />
-					<Card>
-						<Description
-							title="Step 02"
-							content={
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'space-between',
-									}}
-								>
-									<div>$ Use part of the profits to ...</div>
-									<div style={{ color: 'lightgray' }}>
-										Status: Waiting
-									</div>
-								</div>
-							}
-						/>
+					<Card mb={1} className="WikiContent">
+						<Text h3>Chapter 01: Genesis</Text>
+						<Text small>
+							• Fair-launch of Titanborne NFTs, top players in our
+							Discord game mint our NFTs for{' '}
+							<Text span b>
+								FREE
+							</Text>
+							, no forcing members to spam and have disingenuous
+							conversations, no hunting for invite links , and no
+							private or reserved mints. A TRUE COMMUNITY will
+							shape itself around a tangibly refreshing idea that
+							fairly distributes value to those who genuinely want
+							to be a part of it.
+						</Text>
+						<br />
+						<Text small>
+							• Our 1st. experiment begins. How many{' '}
+							<Badge
+								style={{
+									backgroundColor: 'crimson',
+									color: 'white',
+								}}
+							>
+								Titanbornes
+							</Badge> 
+							{' '} will survive? What will the highest fusion count be?
+							What can we possibly have in mind for your NFT's
+							fusion count in the next chapters?
+						</Text>
 					</Card>
-					<Spacer />
-					<Card>
-						<Description
-							title="Step 03"
-							content={
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'space-between',
-									}}
-								>
-									<div>
-										Drop 3D Printable Files for Asset Owners
-									</div>
-									<div style={{ color: 'lightgray' }}>
-										Status: Development
-									</div>
-								</div>
-							}
-						/>
+					<Card mb={1} className="WikiContent">
+						<Text h3>Chapter 02: Ascension</Text>
+						<Text small>
+							Time for the 2nd. experiment. How about we escalate
+							everything and hand you the Helm? We'll gradually
+							give more details on this after we execute on our
+							original promises.
+						</Text>
 					</Card>
-					<Spacer />
-					<Card>
-						<Description
-							title="Step 04"
-							content={
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'space-between',
-									}}
-								>
-									<div style={{ maxWidth: '70%' }}>
-										Web Application Major Update, Implement
-										Achievement System, Friend Request and
-										other Social Elements
-									</div>
-									<div style={{ color: 'lightgray' }}>
-										Status: Development
-									</div>
-								</div>
-							}
-						/>
+					<Card mb={1} className="WikiContent">
+						<Text h3>Chapter 03: Prophecy</Text>
+						<Text small i>
+							The Grand Finale...
+						</Text>
 					</Card>
-					<Spacer />
-					<Card>
-						<Description
-							title="Step 05"
-							content={
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'space-between',
-									}}
-								>
-									<div>
-										Implement Multiplayer Functionality - 16
-										Player Free Roam Parties
-									</div>
-									<div style={{ color: 'lightgray' }}>
-										Status: Development
-									</div>
-								</div>
-							}
-						/>
-					</Card>
-					<Spacer />
-					<Card>
-						<Description
-							title="Step 06"
-							content={
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'space-between',
-									}}
-								>
-									<div>
-										Implement Multiplayer 16 Player Race
-										Mode
-									</div>
-									<div style={{ color: 'lightgray' }}>
-										Status: Development
-									</div>
-								</div>
-							}
-						/>
-					</Card>
-					<Spacer />
-					<Card>
-						<Description
-							title="Step 07"
-							content={
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'space-between',
-									}}
-								>
-									<div>
-										Drop X Held Back Tokens to random
-										addresses
-									</div>
-									<div style={{ color: 'lightgray' }}>
-										Status: Coming Soon.
-									</div>
-								</div>
-							}
-						/>
-					</Card>
-					<Spacer />
-					<Card>
-						<Description
-							title="Step 08"
-							content={
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'space-between',
-									}}
-								>
-									<div>
-										Titanbornes ICO - Governance Token for
-										Future Projects{' '}
-									</div>
-									<div style={{ color: 'lightgray' }}>
-										Status: Development
-									</div>
-								</div>
-							}
-						/>
-					</Card>
-					<Spacer />
-					<Card>
-						<Description
-							title="Step 09"
-							content={
-								<div
-									style={{
-										display: 'flex',
-										justifyContent: 'space-between',
-									}}
-								>
-									<div>Release our next Application</div>
-									<div style={{ color: 'lightgray' }}>
-										Status: Pre-Production
-									</div>
-								</div>
-							}
-						/>
+					<Card className="WikiContent">
+						<Text h3>Chapter 04: Epilogue</Text>
+						<Text small>
+							Final Experiment over. It's time to craft a
+							well-oiled machine to continuously incubate those
+							who deserve to experiment to find new utilities in
+							NFTs and attract lasting community members who know
+							where true value in NFTs will exist.
+						</Text>
 					</Card>
 				</div>
 			</div>

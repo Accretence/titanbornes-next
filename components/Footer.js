@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import {
 	Text,
+	Badge,
 	Grid,
 	Link as GeistLink,
 	useTheme,
@@ -40,70 +41,61 @@ const Footer = () => {
 				<Spacer />
 				<div className="FooterWrapper">
 					<Grid.Container gap={0}>
-						<Grid className="FooterGrid" xs={12} sm={6}>
+						<Grid className="FooterGrid" xs={8}>
 							<ul>
 								<li>
-									<Link href="/">All NFTs</Link>
+									<Link href="/">OpenSea [Coming Soon]</Link>
 								</li>
 								<li>
-									<Link href="/">Skateboarding Game</Link>
+									<Link href="/">
+										LooksRare [Coming Soon]
+									</Link>
 								</li>
 								<li>
-									<Link href="/">Point Cloud Game</Link>
-								</li>
-								<li>
-									<Link href="/">Flying Game</Link>
+									<Link href="/">Rarible [Coming Soon]</Link>
 								</li>
 							</ul>
 						</Grid>
-						<Grid className="FooterGrid" xs={12} sm={6}>
+						<Grid className="FooterGrid" xs={8}>
 							<ul>
 								<li>
-									<Link href="/">My Profile</Link>
+									<Link href="/">
+										Etherscan [Coming Soon]
+									</Link>
 								</li>
 								<li>
-									<Link href="/">My Applications</Link>
-								</li>
-								<li>
-									<Link href="/">My Collection</Link>
-								</li>
-								<li>
-									<Link href="/">My Account Settings</Link>
+									<Link href="/">Github [Coming Soon]</Link>
 								</li>
 							</ul>
 						</Grid>
-						<Grid className="FooterGrid" xs={12} sm={6}>
+						<Grid className="FooterGrid" xs={8}>
 							<ul>
 								<li>
-									<Link href="/">Help Center</Link>{' '}
-								</li>
-
-								<li>
-									<Link href="/">Suggestions</Link>{' '}
-								</li>
-
-								<li>
-									<Link href="/">Blog</Link>{' '}
-								</li>
-
-								<li>
-									<Link href="/">Docs</Link>{' '}
-								</li>
-							</ul>
-						</Grid>
-						<Grid className="FooterGrid" xs={12} sm={6}>
-							<ul>
-								<li>
-									<Link href="/">About</Link>
+									<Link
+										target="_blank"
+										rel="noopener"
+										href="https://www.youtube.com/channel/UChzAwl-JJa2rPXToBaxdkxw"
+									>
+										YouTube
+									</Link>
 								</li>
 								<li>
-									<Link href="/">Careers</Link>
+									<Link
+										target="_blank"
+										rel="noopener"
+										href="https://instagram.com/titanbornes"
+									>
+										Instagram
+									</Link>
 								</li>
 								<li>
-									<Link href="/">Privacy Policy</Link>
-								</li>
-								<li>
-									<Link href="/">Terms of Service</Link>
+									<Link
+										target="_blank"
+										rel="noopener"
+										href="https://linkedin.com/company/titanbornes"
+									>
+										Linkedin
+									</Link>
 								</li>
 							</ul>
 						</Grid>
