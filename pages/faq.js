@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 // Components
 import Meta from '../utils/meta'
@@ -11,7 +12,6 @@ import {
 	Text,
 	Badge,
 	Image,
-	Link as GeistLink,
 	Spacer,
 	Card,
 } from '@geist-ui/core'
@@ -26,7 +26,7 @@ const FAQ = () => {
 			<div className="PageHeader">
 				<Text h2>FAQ </Text>
 				<Text small>
-					Here you will find our wiki in Q&A format designed to
+					Here you will find our FAQ designed to
 					introduce you to Titanbornes.
 				</Text>
 			</div>
@@ -59,7 +59,14 @@ const FAQ = () => {
 							What is the minting price?
 						</Text>
 						<Text small>
-							0.08 ETH. The mint will be FREE for top %10 of Whitelisted players in each faction's leaderboard.
+							0.08 ETH. The mint will be FREE for top %10 of <Badge
+								style={{
+									backgroundColor: 'yellowgreen',
+									color: 'white',
+								}}
+							>
+								Whitelisted
+							</Badge> players in each faction's leaderboard.
 						</Text>
 					</Card>
 					<Card mb={1} className="WikiContent">
@@ -75,7 +82,21 @@ const FAQ = () => {
 							When can I mint?
 						</Text>
 						<Text small>
-							~ 48 hours after 4,000 ICHOR points is mined collectively by both Reapers and Tricksters factions in our Discord game.
+							~ 48 hours after 4,000 ICHOR points is mined collectively by both <Badge
+								style={{
+									backgroundColor: 'orangered',
+									color: 'white',
+								}}
+							>
+								Reapers
+							</Badge> and <Badge
+								style={{
+									backgroundColor: 'purple',
+									color: 'white',
+								}}
+							>
+								Tricksters
+							</Badge> factions in our Discord game.
 						</Text>
 					</Card>
 					<Card mb={1} className="WikiContent">
@@ -91,7 +112,14 @@ const FAQ = () => {
 							What are the whitelist & public sale allocations?
 						</Text>
 						<Text small>
-							All 4,000 tokens will be available to mint by Whitelisted members in a 24h window, after which any unminted supply will be available to mint publicly.
+							All 4,000 tokens will be available to mint by <Badge
+								style={{
+									backgroundColor: 'yellowgreen',
+									color: 'white',
+								}}
+							>
+								Whitelisted
+							</Badge> members in a 24h window, after which any unminted supply will be available to mint publicly.
 						</Text>
 					</Card>
 					<Card mb={1} className="WikiContent">
@@ -99,7 +127,14 @@ const FAQ = () => {
 							How do I earn a whitelist position?
 						</Text>
 						<Text small>
-							Check-out whitelist to learn how to become Whitelisted.
+							Check-out <Link href="/whitelist" color>whitelist</Link> to learn how to become <Badge
+								style={{
+									backgroundColor: 'yellowgreen',
+									color: 'white',
+								}}
+							>
+								Whitelisted
+							</Badge>.
 						</Text>
 					</Card>
 					<Card mb={1} className="WikiContent">
@@ -119,7 +154,7 @@ const FAQ = () => {
 					</Card>
 					<Card className="WikiContent">
 						<Text h3>
-							Will friends that I invite join my faction?
+							Will friends that I invite to Discord server join my faction?
 						</Text>
 						<Text small>
 							Yes.

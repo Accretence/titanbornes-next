@@ -77,6 +77,7 @@ const Tech = () => {
 							time you trigger a FUSION. In order to generate your
 							new artwork:
 							<br/>
+							<br/>
 							<Text span b>1st.</Text> We are running a subgraph to fetch
 							and index on-chain transactions. Each time a FUSION
 							happens our smart-contract broadcasts it as an event

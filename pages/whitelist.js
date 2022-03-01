@@ -10,8 +10,8 @@ import {
 	useTheme,
 	Text,
 	Badge,
+	Code,
 	Image,
-	Link as GeistLink,
 	Spacer,
 	Card,
 } from '@geist-ui/core'
@@ -42,8 +42,22 @@ const Whitelist = () => {
 						<Text h3>How EXACTLY does it work?</Text>
 						<Text small>
 							There are 4,000 whitelist spots in total represented
-							by each faction's ICHOR points. @Reapers and
-							@Tricksters factions compete for those whitelist
+							by each faction's ICHOR points. <Badge
+								style={{
+									backgroundColor: 'orangered',
+									color: 'white',
+								}}
+							>
+								Reapers
+							</Badge> and
+							{' '}<Badge
+								style={{
+									backgroundColor: 'purple',
+									color: 'white',
+								}}
+							>
+								Tricksters
+							</Badge> factions compete for those whitelist
 							spots. If 2 factions perform similarly each will get
 							2,000 spots but if one outpeforms the other, it can
 							get much more.
@@ -111,7 +125,7 @@ const Whitelist = () => {
 					<Card className="WikiContent">
 						<Text h3>Do I have to remember all commands?</Text>
 						<Text small>
-							No, you can just type / and Discord shows you all
+							No, you can just type <Code>/</Code> and Discord shows you all
 							commands available in this server.
 						</Text>
 					</Card>

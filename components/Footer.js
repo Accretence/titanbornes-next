@@ -44,58 +44,93 @@ const Footer = () => {
 						<Grid className="FooterGrid" xs={8}>
 							<ul>
 								<li>
-									<Link href="/">OpenSea [Coming Soon]</Link>
+									<GeistLink
+										target="_blank"
+										rel="noopener"
+										href="/"
+									>
+										OpenSea [Coming Soon]
+									</GeistLink>
 								</li>
 								<li>
-									<Link href="/">
+									<GeistLink
+										target="_blank"
+										rel="noopener"
+										href="/"
+									>
 										LooksRare [Coming Soon]
-									</Link>
+									</GeistLink>
 								</li>
 								<li>
-									<Link href="/">Rarible [Coming Soon]</Link>
-								</li>
-							</ul>
-						</Grid>
-						<Grid className="FooterGrid" xs={8}>
-							<ul>
-								<li>
-									<Link href="/">
-										Etherscan [Coming Soon]
-									</Link>
-								</li>
-								<li>
-									<Link href="/">Github [Coming Soon]</Link>
+									<GeistLink
+										target="_blank"
+										rel="noopener"
+										href="/"
+									>
+										Rarible [Coming Soon]
+									</GeistLink>
 								</li>
 							</ul>
 						</Grid>
 						<Grid className="FooterGrid" xs={8}>
 							<ul>
 								<li>
-									<Link
+									<GeistLink
+										target="_blank"
+										rel="noopener"
+										href="/"
+									>
+										Etherscan Contract [Coming Soon]
+									</GeistLink>
+								</li>
+								<li>
+									<GeistLink
+										target="_blank"
+										rel="noopener"
+										href="/"
+									>
+										Subgraph [Coming Soon]
+									</GeistLink>
+								</li>
+								<li>
+									<GeistLink
+										target="_blank"
+										rel="noopener"
+										href="https://github.com/titanbornes"
+									>
+										Github Organization
+									</GeistLink>
+								</li>
+							</ul>
+						</Grid>
+						<Grid className="FooterGrid" xs={8}>
+							<ul>
+								<li>
+									<GeistLink
 										target="_blank"
 										rel="noopener"
 										href="https://www.youtube.com/channel/UChzAwl-JJa2rPXToBaxdkxw"
 									>
 										YouTube
-									</Link>
+									</GeistLink>
 								</li>
 								<li>
-									<Link
+									<GeistLink
 										target="_blank"
 										rel="noopener"
 										href="https://instagram.com/titanbornes"
 									>
 										Instagram
-									</Link>
+									</GeistLink>
 								</li>
 								<li>
-									<Link
+									<GeistLink
 										target="_blank"
 										rel="noopener"
 										href="https://linkedin.com/company/titanbornes"
 									>
 										Linkedin
-									</Link>
+									</GeistLink>
 								</li>
 							</ul>
 						</Grid>
@@ -116,7 +151,6 @@ const Footer = () => {
 				}
 				footer a {
 					color: ${theme.palette.accents_6}!important;
-					font-size: 0.65rem;
 				}
 				a:hover {
 					color: ${theme.palette.foreground}!important;
@@ -136,6 +170,9 @@ const Footer = () => {
 				.FooterGrid {
 					justify-content: center;
 					margin: 0 auto;
+				}
+				.FooterGrid a {
+					font-size: 0.65rem!important;
 				}
 				footer {
 					border-top: 1px solid ${theme.palette.border};

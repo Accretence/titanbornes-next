@@ -9,7 +9,6 @@ import {
 	Grid,
 	Card,
 	Image,
-	Link as GeistLink,
 	Text,
 	Display,
 	Description,

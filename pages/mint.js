@@ -17,7 +17,6 @@ import {
 	Grid,
 	Text,
 	Image,
-	Link as GeistLink,
 	Spacer,
 	Card,
 } from '@geist-ui/core'
@@ -242,7 +241,7 @@ const Mint = () => {
 											<>
 												<Grid xs={24}>
 													<Card>
-														<Text h6 my={0}>
+														<Text h3>
 															Whitelist
 															Eligibility
 														</Text>
@@ -275,7 +274,7 @@ const Mint = () => {
 															)
 														}}
 														width="100%"
-														type="warning"
+														type="secondary"
 													>
 														Reapers
 													</Button>
@@ -288,7 +287,7 @@ const Mint = () => {
 															)
 														}}
 														width="100%"
-														type="warning"
+														type="secondary"
 													>
 														Tricksters
 													</Button>
