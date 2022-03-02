@@ -83,7 +83,7 @@ const Whitelist = () => {
 							>
 								Whitelisted
 							</Badge>
-							. You can check your ranking with the /leaderboard
+							. You can check your ranking with the <Code>/leaderboard</Code>
 							command.
 						</Text>
 					</Card>
@@ -98,7 +98,14 @@ const Whitelist = () => {
 					<Card mb={1} className="WikiContent">
 						<Text h3>What is ICHOR?</Text>
 						<Text small>
-							Each ICHOR represents 1 whitelist spot for that
+							Each ICHOR represents a single <Badge
+								style={{
+									backgroundColor: 'yellowgreen',
+									color: 'white',
+								}}
+							>
+								Whitelisted
+							</Badge> spot for that
 							faction.
 						</Text>
 					</Card>
@@ -111,8 +118,15 @@ const Whitelist = () => {
 					<Card mb={1} className="WikiContent">
 						<Text h3>Can I choose my faction?</Text>
 						<Text small>
-							No. Faction roles are assigned randomly by this bot
-							and cannot be changed.
+							No. Faction roles are assigned randomly by <Badge
+								style={{
+									backgroundColor: 'darkkhaki',
+									color: 'white',
+								}}
+							>
+								Titanbornes-Reception-Bot
+							</Badge>{' '}
+							in our Discord server and cannot be changed.
 						</Text>
 					</Card>
 					<Card mb={1} className="WikiContent">

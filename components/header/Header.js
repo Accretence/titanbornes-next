@@ -14,7 +14,7 @@ const Header = () => {
 			<nav className="MenuNavigation">
 				<Text className="MenuNavigationTitle">
 					<Link className="MenuNavigationTitle" href="/">
-						[ TITANBORNES ]
+						TITANBORNES
 					</Link>
 				</Text>
 				<div>

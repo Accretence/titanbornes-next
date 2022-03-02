@@ -4,6 +4,9 @@ import React from 'react'
 import Meta from '../utils/meta'
 import Header from '../components/header/Header.js'
 import Footer from '../components/Footer'
+import YouTube from '../components/YouTube'
+
+// Libraries
 import {
 	useTheme,
 	Grid,
@@ -29,18 +32,27 @@ const Index = () => {
 							TITANBORNES!
 						</span>
 					</Text>
-					<Text type="secondary" small>
-						Titanbornes is an experimental NFT Project...
-					</Text>
 				</div>
 			</div>
 			<div className="PageWrapper">
 				<div className="PageContent">
 					<Grid.Container mb={0} gap={1}>
+					<Grid xs={24}>
+							<Card >
+								<Text h3>What is Titanbornes?</Text>
+								<Text small>
+									Experimental NFT Collection trying to do
+									things a little differently. What if your
+									NFT evolved in each transaction? What if a
+									collection's supply dropped after every
+									transaction?
+								</Text>
+							</Card>
+						</Grid>
 						<Grid xs={12}>
 							<Card px={0.1} pt={0.1}>
 								<Image
-									src="https://cdn.dribbble.com/users/1663335/screenshots/14778371/media/823c67670859ed0cbfc420e3f1972c18.jpg?compress=1&resize=800x600&vertical=top"
+									src="https://i.pinimg.com/originals/6c/d5/0c/6cd50cd10de245e31ba460f31485ecca.gif"
 									style={{
 										objectFit: 'cover',
 									}}
@@ -56,11 +68,10 @@ const Index = () => {
 								</Text>
 							</Card>
 						</Grid>
-						
-						<Grid xs={12} >
+						<Grid xs={12}>
 							<Card px={0.1} pt={0.1}>
 								<Image
-									src="https://cdn.dribbble.com/users/1663335/screenshots/14772147/media/ca4ac668405c702ec65f1ca45583eda1.jpg?compress=1&resize=800x600&vertical=top"
+									src="https://i.pinimg.com/originals/c8/d0/bd/c8d0bd479c4cffe0aed5d06c68d2ff91.gif"
 									style={{
 										objectFit: 'cover',
 									}}
