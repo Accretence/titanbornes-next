@@ -67,19 +67,19 @@ const Fusion = () => {
 					<Card mb={1} className="WikiContent">
 						<Text h3>So my NFT gets an upgraded artwork on each FUSION?</Text>
 						<Text small>
-							Yup. You just need to click on the refresh metadata button on the token's OpenSea page and wait for OpenSea to fetch the new artwork.
+							Yup. You just need to click on the refresh metadata button on your NFT's marketplace page and wait for the marketplace to fetch the new artwork.
 						</Text>
 					</Card>
 					<Card mb={1} className="WikiContent">
 						<Text h3>Do I need to do something extra to make the FUSION work?</Text>
 						<Text small>
-							No. Fusions happen automatically on basic token transfers ( when you purchase an NFT on OpenSea for example ) without the need for you to do any extra steps or pay fees for an extra transaction.
+							No. Fusions happen automatically on basic token transfers ( when you purchase an NFT on a marketplace for example ) without the need for you to do any extra steps or pay fees for an extra transaction.
 						</Text>
 					</Card>
 					<Card mb={1} className="WikiContent">
 						<Text h3>An example with numbers?</Text>
 						<Text small>
-							You own an NFT with 3 fusions, you buy an NFT with 5 fusions from OpenSea, the NFT with 5 fusions is burned and the token you originally owned EVOLVES 5 times, turning to an NFT with 8 fusions and MASSIVELY upgrades its artwork.
+							You own an NFT with 3 fusions, you buy an NFT with 5 fusions from a  marketplace, the NFT with 5 fusions is burned and the token you originally owned EVOLVES 5 times, turning to an NFT with 8 fusions and MASSIVELY upgrades its artwork.
 						</Text>
 					</Card>
 					<Card mb={1} className="WikiContent">

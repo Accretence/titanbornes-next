@@ -35,7 +35,7 @@ const FAQ = () => {
 					<Card mt={4} mb={1} className="WikiContent">
 						<Text h3>What is Titanbornes?</Text>
 						<Text small>
-							Experimental NFT Collection trying to do things a little differently. What if your NFT evolved in each transaction? What if a collection's supply dropped after every transaction?
+							Experimental NFT Collection trying to do things a little differently. What if your NFT <Text span b>EVOLVED</Text> in each transaction? What if a collection's supply <Text span b>DECREMENTED</Text> after every transaction?
 						</Text>
 					</Card>
 					<Card mb={1} className="WikiContent">

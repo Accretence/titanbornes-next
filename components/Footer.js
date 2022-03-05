@@ -49,15 +49,6 @@ const Footer = () => {
 										rel="noopener"
 										href="/"
 									>
-										OpenSea [Coming Soon]
-									</GeistLink>
-								</li>
-								<li>
-									<GeistLink
-										target="_blank"
-										rel="noopener"
-										href="/"
-									>
 										LooksRare [Coming Soon]
 									</GeistLink>
 								</li>
@@ -67,7 +58,25 @@ const Footer = () => {
 										rel="noopener"
 										href="/"
 									>
+										X2Y2 [Coming Soon]
+									</GeistLink>
+								</li>
+								<li>
+									<GeistLink
+										target="_blank"
+										rel="noopener"
+										href="/"
+									>
 										Rarible [Coming Soon]
+									</GeistLink>
+								</li>
+								<li>
+									<GeistLink
+										target="_blank"
+										rel="noopener"
+										href="/"
+									>
+										OpenSea [Coming Soon]
 									</GeistLink>
 								</li>
 							</ul>
@@ -96,6 +105,15 @@ const Footer = () => {
 									<GeistLink
 										target="_blank"
 										rel="noopener"
+										href="/"
+									>
+										Contract Audit [Coming Soon]
+									</GeistLink>
+								</li>
+								<li>
+									<GeistLink
+										target="_blank"
+										rel="noopener"
 										href="https://github.com/titanbornes"
 									>
 										Github Organization
@@ -105,6 +123,24 @@ const Footer = () => {
 						</Grid>
 						<Grid className="FooterGrid" xs={8}>
 							<ul>
+								<li>
+									<GeistLink
+										target="_blank"
+										rel="noopener"
+										href="https://discord.gg/VVBww7qmhR"
+									>
+										Discord
+									</GeistLink>
+								</li>
+								<li>
+									<GeistLink
+										target="_blank"
+										rel="noopener"
+										href="https://www.twitter.com/titanbornes"
+									>
+										Twitter
+									</GeistLink>
+								</li>
 								<li>
 									<GeistLink
 										target="_blank"
@@ -121,15 +157,6 @@ const Footer = () => {
 										href="https://instagram.com/titanbornes"
 									>
 										Instagram
-									</GeistLink>
-								</li>
-								<li>
-									<GeistLink
-										target="_blank"
-										rel="noopener"
-										href="https://linkedin.com/company/titanbornes"
-									>
-										Linkedin
 									</GeistLink>
 								</li>
 							</ul>
@@ -172,7 +199,7 @@ const Footer = () => {
 					margin: 0 auto;
 				}
 				.FooterGrid a {
-					font-size: 0.65rem!important;
+					font-size: 0.7rem!important;
 				}
 				footer {
 					border-top: 1px solid ${theme.palette.border};

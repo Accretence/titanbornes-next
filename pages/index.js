@@ -43,8 +43,8 @@ const Index = () => {
 								<Text small>
 									Experimental NFT Collection trying to do
 									things a little differently. What if your
-									NFT evolved in each transaction? What if a
-									collection's supply dropped after every
+									NFT <Text span b>EVOLVED</Text> in each transaction? What if a
+									collection's supply <Text span b>DECREMENTED</Text> after every
 									transaction?
 								</Text>
 							</Card>

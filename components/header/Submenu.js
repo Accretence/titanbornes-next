@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 import HeaderOptions from './HeaderOptions'
 
-import { Tabs, useTheme } from '@geist-ui/core'
+import { Tabs, Badge, useTheme } from '@geist-ui/core'
 
 const Submenu = () => {
 	const router = useRouter()
@@ -24,10 +24,12 @@ const Submenu = () => {
 				<div className={`Submenu ${sticky ? 'SubmenuSticky' : ''}`}>
 					<div className="SubmenuInner">
 						<Tabs
+              
 							value={router.pathname}
 							onChange={(route) => router.push(route)}
 						>
 							<Tabs.Item
+                ml={0}
 								label={sticky ? 'TITANBORNES' : 'HOME'}
 								value="/"
 							/>
@@ -37,6 +39,24 @@ const Submenu = () => {
 							<Tabs.Item label="WHITELIST" value="/whitelist" />
 							<Tabs.Item label="LORE" value="/lore" />
 							<Tabs.Item label="TECH" value="/tech" />
+							<Tabs.Item
+								label={
+									<>
+										MARKETPLACE
+										<Badge
+                      ml={0.5}
+                      scale={0.5}
+											style={{
+												backgroundColor: 'crimson',
+												color: 'white',
+											}}
+										>
+											SOON
+										</Badge>
+									</>
+								}
+								value="/marketplace"
+							/>
 						</Tabs>
 						<div className="headerOptions">
 							{sticky && <HeaderOptions />}
@@ -45,6 +65,9 @@ const Submenu = () => {
 				</div>
 			</nav>
 			<style>{`
+        .scroll-container {
+          padding-left: 0px!important;
+        }
         .SubmenuWrapper {
           height: 50px;
           position: relative;
