@@ -61,8 +61,8 @@ const FAQ = () => {
 						<Text small>
 							0.08 ETH. The mint will be FREE for top %10 of <Badge
 								style={{
-									backgroundColor: 'yellowgreen',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Whitelisted
@@ -84,15 +84,15 @@ const FAQ = () => {
 						<Text small>
 							~ 48 hours after 4,000 ICHOR points is mined collectively by both <Badge
 								style={{
-									backgroundColor: 'orangered',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Reapers
 							</Badge> and <Badge
 								style={{
-									backgroundColor: 'purple',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Tricksters
@@ -114,8 +114,8 @@ const FAQ = () => {
 						<Text small>
 							All 4,000 tokens will be available to mint by <Badge
 								style={{
-									backgroundColor: 'yellowgreen',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Whitelisted
@@ -129,8 +129,8 @@ const FAQ = () => {
 						<Text small>
 							Check-out <Link href="/whitelist" color>whitelist</Link> to learn how to become <Badge
 								style={{
-									backgroundColor: 'yellowgreen',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Whitelisted
@@ -144,8 +144,8 @@ const FAQ = () => {
 						<Text small>
 							Yes, but only if you're <Badge
 								style={{
-									backgroundColor: 'yellowgreen',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Whitelisted

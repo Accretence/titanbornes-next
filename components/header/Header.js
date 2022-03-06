@@ -12,7 +12,7 @@ const Header = () => {
 	return (
 		<>
 			<nav className="MenuNavigation">
-				<Text className="MenuNavigationTitle">
+				<Text mt={1.5} className="MenuNavigationTitle">
 					<Link className="MenuNavigationTitle" href="/">
 						TITANBORNES
 					</Link>
@@ -39,10 +39,9 @@ const Header = () => {
           }
           .MenuNavigationTitle a {
             color: ${theme.palette.foreground}!important;
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin: 0;
-            letter-spacing: 0.2rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 0.3rem;
           }
           .MenuNavigation > div {
             display: flex;

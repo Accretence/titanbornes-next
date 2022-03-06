@@ -66,8 +66,8 @@ const Roadmap = () => {
 							• Our 1st. experiment begins. How many{' '}
 							<Badge
 								style={{
-									backgroundColor: 'crimson',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Titanbornes

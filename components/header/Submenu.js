@@ -47,8 +47,8 @@ const Submenu = () => {
                       ml={0.5}
                       scale={0.5}
 											style={{
-												backgroundColor: 'crimson',
-												color: 'white',
+												backgroundColor: '#ffd400',
+												color: 'black',
 											}}
 										>
 											SOON

@@ -29,7 +29,8 @@ const Lore = () => {
 
 					<Text small>
 						This is a community owned project.{' '}
-						<Badge type="warning">Founders</Badge> pushed it into
+						<Badge style={{backgroundColor: '#ffd400',
+									color: 'black'}}>Founders</Badge> pushed it into
 						existence but we will all shape it together with our
 						discussions, interactions, Discord polls and if need be,
 						DAO voting.
@@ -49,8 +50,8 @@ const Lore = () => {
 							factions;{' '}
 							<Badge
 								style={{
-									backgroundColor: 'orangered',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Reapers
@@ -58,8 +59,8 @@ const Lore = () => {
 							and{' '}
 							<Badge
 								style={{
-									backgroundColor: 'purple',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Tricksters
@@ -76,8 +77,8 @@ const Lore = () => {
 							to. The first and only children they birthed out of
 							their own bodies were the <Badge
 								style={{
-									backgroundColor: 'cornflowerblue',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Nightmares
@@ -89,8 +90,8 @@ const Lore = () => {
 							blood into a mountain and made it flow through a
 							fountain which birthed <Badge
 								style={{
-									backgroundColor: 'crimson',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Titanbornes
@@ -104,8 +105,8 @@ const Lore = () => {
 						<Text small>
 							<Badge
 								style={{
-									backgroundColor: 'orangered',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Reapers
@@ -113,8 +114,8 @@ const Lore = () => {
 							<br/>
 							<Badge
 								style={{
-									backgroundColor: 'purple',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Tricksters
@@ -132,8 +133,8 @@ const Lore = () => {
 							bizarre artifact that made her come in contact with
 							a voice that introduced themeselves as <Badge
 								style={{
-									backgroundColor: 'cornflowerblue',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Nightmares
@@ -144,8 +145,8 @@ const Lore = () => {
 							imprisoned them soon after they were born. How the
 							Titans created the <Badge
 								style={{
-									backgroundColor: 'crimson',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Titanbornes
@@ -169,8 +170,8 @@ const Lore = () => {
 							as abominations exiled from face of the earth
 							millenias ago. <Badge
 								style={{
-									backgroundColor: 'crimson',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Titanbornes

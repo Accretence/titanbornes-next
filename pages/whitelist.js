@@ -44,16 +44,16 @@ const Whitelist = () => {
 							There are 4,000 whitelist spots in total represented
 							by each faction's ICHOR points. <Badge
 								style={{
-									backgroundColor: 'orangered',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Reapers
 							</Badge> and
 							{' '}<Badge
 								style={{
-									backgroundColor: 'purple',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Tricksters
@@ -77,8 +77,8 @@ const Whitelist = () => {
 							become{' '}
 							<Badge
 								style={{
-									backgroundColor: 'yellowgreen',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Whitelisted
@@ -100,8 +100,8 @@ const Whitelist = () => {
 						<Text small>
 							Each ICHOR represents a single <Badge
 								style={{
-									backgroundColor: 'yellowgreen',
-									color: 'white',
+									backgroundColor: '#ffd400',
+									color: 'black',
 								}}
 							>
 								Whitelisted
