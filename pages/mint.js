@@ -72,18 +72,18 @@ const Mint = () => {
 			if (response.hash) {
 				setToast({
 					text: 'Congrats! 🎉 You successfully minted your Titanborne NFT!',
-					type: 'success',
+					type: 'warning',
 				})
 			} else {
 				setToast({
 				text: response.message,
-				type: 'error',
+				type: 'warning',
 			})
 			}
 		} catch (error) {
 			setToast({
 				text: error.message,
-				type: 'error',
+				type: 'warning',
 			})
 		}
 	}
@@ -116,19 +116,19 @@ const Mint = () => {
 				setWhitelistChecked(true)
 				setToast({
 					text: 'Congrats! 🎉 You are whitelisted to take part in our presale.',
-					type: 'success',
+					type: 'warning',
 				})
 			} else {
 				setToast({
 					text: 'Sorry! 😔💔 You are not whitelisted to take part in our presale.',
-					type: 'error',
+					type: 'warning',
 				})
 			}
 		} catch (error) {
 			console.log(error)
 			setToast({
 				text: error.message,
-				type: 'error',
+				type: 'warning',
 			})
 		}
 	}

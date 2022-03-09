@@ -14,6 +14,7 @@ import {
     Spacer,
     Card,
     Description,
+    Grid,
 } from '@geist-ui/core'
 
 const Tech = () => {
@@ -26,19 +27,26 @@ const Tech = () => {
             <div className="PageHeader">
                 <div style={{ marginTop: '2rem', marginBottom: '3rem' }}>
                     <Text h2>Tech </Text>
-
-                    <Text small>
-                        Interesting things we are doing on the technology side.
-                        We'll gradually give more details after we publish our
-                        Smart Contract and announce upcoming features.
-                        <br />
-                        <br />
-                        For security measures & keeping our community safe from
-                        sophisticated scams, we cannot open-source our
-                        tech-stack but moving forward, we'll be gradually
-                        publishing what we've built and we are looking forward
-                        to see what can be built on top of it!
-                    </Text>
+                    <Grid.Container gap={3}>
+                        <Grid xs={12}>
+                            <Text small>
+                                Interesting things we are doing on the
+                                technology side. We'll gradually give more
+                                details after we publish our Smart Contract and
+                                announce upcoming features.
+                            </Text>
+                        </Grid>
+                        <Grid xs={12}>
+                            <Text small>
+                                For security measures & keeping our community
+                                safe from sophisticated scams, we cannot
+                                open-source our tech-stack but moving forward,
+                                we'll be gradually publishing what we've built
+                                and we are looking forward to see what can be
+                                built on top of it!
+                            </Text>
+                        </Grid>
+                    </Grid.Container>
                 </div>
             </div>
             <Spacer />
@@ -110,7 +118,10 @@ const Tech = () => {
             <Footer />
             <style>
                 {`
-					.card:hover {
+                    small {
+                        text-align: justify;
+                    }
+                    .card:hover {
 					filter: invert(1);
 						}
 					.PageHeader {

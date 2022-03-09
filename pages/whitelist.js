@@ -48,7 +48,7 @@ const Whitelist = () => {
 									color: 'black',
 								}}
 							>
-								Reapers
+								<b>Reapers</b>
 							</Badge> and
 							{' '}<Badge
 								style={{
@@ -56,7 +56,7 @@ const Whitelist = () => {
 									color: 'black',
 								}}
 							>
-								Tricksters
+								<b>Tricksters</b>
 							</Badge> factions compete for those whitelist
 							spots. If 2 factions perform similarly each will get
 							2,000 spots but if one outpeforms the other, it can

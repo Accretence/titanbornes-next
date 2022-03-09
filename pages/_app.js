@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }) {
 					console.log("Reading from localStorage")
 					setProvider({
 						provider: new ethers.providers.Web3Provider(window.ethereum), walletAddress: localStoragedWalletAddress,
-						correctChain: window.ethereum.chainId == '0x4' ? true : false
+						correctChain: window.ethereum.chainId == process.env.NEXT_PUBLIC_CHAINID ? true : false
 					})
 				}
 			}

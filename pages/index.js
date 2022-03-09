@@ -27,7 +27,7 @@ const Index = () => {
             <Header />
             <div className="PageHeader">
                 <div style={{ marginTop: '2rem', marginBottom: '4rem' }}>
-                    <Text mb={1} style={{ fontSize: '2rem' }}>
+                    <Text h3>
                         Welcome to{' '}
                         <span
                             style={{
@@ -38,47 +38,34 @@ const Index = () => {
                             TITANBORNES!
                         </span>
                     </Text>
+                    <Text small>
+                        Titanbornes is an experimental NFT Collection trying to
+                        do things a little differently. What if your NFT{' '}
+                        <Badge
+                            style={{
+                                backgroundColor: '#ffd400',
+                                color: 'black',
+                            }}
+                        >
+                            <b>EVOLVED</b>
+                        </Badge>{' '}
+                        in each transaction? What if a collection's supply{' '}
+                        <Badge
+                            style={{
+                                backgroundColor: '#ffd400',
+                                color: 'black',
+                            }}
+                        >
+                            <b>DECREMENTED</b>
+                        </Badge>{' '}
+                        after every transaction?
+                    </Text>
                 </div>
             </div>
             <div className="PageWrapper">
                 <div className="PageContent">
                     <Grid.Container mb={0} gap={1}>
-                        <Grid xs={24}>
-                            <Card>
-                                <Text h3>
-                                    What is{' '}
-                                    <Text span b>
-                                        TITANBORNES!
-                                    </Text>{' '}
-                                    ?
-                                </Text>
-                                <Text small>
-                                    Experimental NFT Collection trying to do
-                                    things a little differently. What if your
-                                    NFT{' '}
-                                    <Badge
-                                        style={{
-                                            backgroundColor: '#ffd400',
-                                            color: 'black',
-                                        }}
-                                    >
-                                        <b>EVOLVED</b>
-                                    </Badge>{' '}
-                                    in each transaction? What if a collection's
-                                    supply{' '}
-                                    <Badge
-                                        style={{
-                                            backgroundColor: '#ffd400',
-                                            color: 'black',
-                                        }}
-                                    >
-                                        <b>DECREMENTED</b>
-                                    </Badge>{' '}
-                                    after every transaction?
-                                </Text>
-                            </Card>
-                        </Grid>
-                        <Grid xs={12}>
+                        <Grid xs={24} sm={12}>
                             <Card px={0.1} pt={0.1}>
                                 <Image
                                     src="https://user-images.githubusercontent.com/45223699/156929802-c6d69687-975e-4e82-b7ba-b716d22126bb.jpg"
@@ -97,7 +84,7 @@ const Index = () => {
                                 </Text>
                             </Card>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid xs={24} sm={12}>
                             <Card px={0.1} pt={0.1}>
                                 <Image
                                     src="https://user-images.githubusercontent.com/45223699/156929160-cad93e7c-e31b-44b3-a79e-6d746825add8.jpg"
@@ -118,38 +105,75 @@ const Index = () => {
                         </Grid>
                         <Grid xs={24}>
                             <Card>
-                                <Text h3>
-                                    What is{' '}
-                                    <Text span b>
-                                        TITANBORNES!
-                                    </Text>{' '}
-                                    ?
-                                </Text>
+                                <Text h3>WHAT'S GOING ON HERE? 👆</Text>
                                 <Text small>
-                                    Experimental NFT Collection trying to do
-                                    things a little differently. What if your
-                                    NFT{' '}
-                                    <Badge
+                                    Each single sale in this collection can
+                                    trigger a <Badge
                                         style={{
                                             backgroundColor: '#ffd400',
                                             color: 'black',
                                         }}
                                     >
-                                        <b>EVOLVED</b>
-                                    </Badge>{' '}
-                                    in each transaction? What if a collection's
-                                    supply{' '}
-                                    <Badge
+                                        <b>FUSION</b>
+                                    </Badge>{' '}, evolving the buyer's NFT &
+                                    burning the sold NFT. This <Badge
                                         style={{
                                             backgroundColor: '#ffd400',
                                             color: 'black',
                                         }}
                                     >
-                                        <b>DECREMENTED</b>
-                                    </Badge>{' '}
-                                    after every transaction?
+                                        <b>DECREMENTS</b>
+                                    </Badge>{' '} the
+                                    entire supply of the collection and raises
+                                    the rarity of all NFTs still in circulation.
+                                    This is deflationary-supply taken to the
+                                    extreme!
+                                    <br />
+                                    <br />
+                                    This 👇 video thoroughly explains the
+                                    process.
                                 </Text>
                             </Card>
+                        </Grid>
+                        <Grid xs={24}>
+                            <YouTube embedId="HUcJehWbhzc" />
+                        </Grid>
+                        <Grid xs={24}>
+                            <Card>
+                                <Text h3>HOW DO I EARN A WHITELIST SPOT?</Text>
+                                <Text small>
+                                    How do I earn a whitelist position? There
+                                    are 4,000 whitelist spots in total
+                                    represented by each faction's ICHOR points.{' '}
+                                    <Badge
+                                        style={{
+                                            backgroundColor: '#ffd400',
+                                            color: 'black',
+                                        }}
+                                    >
+                                        <b>Reapers</b>
+                                    </Badge>{' '}
+                                    and{' '}
+                                    <Badge
+                                        style={{
+                                            backgroundColor: '#ffd400',
+                                            color: 'black',
+                                        }}
+                                    >
+                                        <b>Tricksters</b>
+                                    </Badge>{' '}
+                                    factions compete for those whitelist spots.
+                                    If 2 factions perform similarly each will
+                                    get 2,000 spots but if one outpeforms the
+                                    other, it can get much more.
+                                    <br />
+                                    <br />
+                                    This 👇 video thoroughly explains how our whitelisting system works.
+                                </Text>
+                            </Card>
+                        </Grid>
+                        <Grid xs={24}>
+                            <YouTube embedId="7rQ-SY_ZDFs" />
                         </Grid>
                     </Grid.Container>
                 </div>

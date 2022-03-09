@@ -64,7 +64,7 @@ const HeaderOptions = () => {
         } else {
             setToast({
                 text: 'You need to install MetaMask to be able to interact with this application.',
-                type: 'error',
+                type: 'warning',
             })
         }
     }
@@ -74,7 +74,7 @@ const HeaderOptions = () => {
             localStorage.removeItem('currentUserInfo')
             setProvider(null)
             window.location.reload()
-        } else if (window.ethereum.chainId == '0x4') {
+        } else if (window.ethereum.chainId == process.env.NEXT_PUBLIC_CHAINID) {
             window.localStorage.setItem(
                 'currentUserInfo',
                 JSON.stringify(newWalletAddress)
@@ -82,11 +82,14 @@ const HeaderOptions = () => {
             setProvider({
                 provider: new ethers.providers.Web3Provider(window.ethereum),
                 walletAddress: newWalletAddress,
-                correctChain: window.ethereum.chainId == '0x4' ? true : false,
+                correctChain:
+                    window.ethereum.chainId == process.env.NEXT_PUBLIC_CHAINID
+                        ? true
+                        : false,
             })
             setToast({
                 text: 'Wallet connection successful...',
-                type: 'success',
+                type: 'warning',
             })
         }
     }
@@ -166,7 +169,8 @@ const HeaderOptions = () => {
 
             {metamaskAvailable && (
                 <div style={{ display: 'inline' }}>
-                    {window.ethereum.chainId == '0x4' ? (
+                    {window.ethereum.chainId ==
+                    process.env.NEXT_PUBLIC_CHAINID ? (
                         provider ? (
                             <Popover
                                 pb="0.5"
@@ -174,37 +178,50 @@ const HeaderOptions = () => {
                                 placement="bottomEnd"
                                 portalClassName="UserSettingsPopover"
                             >
-                                <Button
+                                {!sticky && <Button
                                     style={
                                         sticky
                                             ? {
+                                                  backgroundColor: '#ffd400',
+                                                  color: 'black',
                                                   top: '0px',
                                                   borderColor: `${theme.palette.accents_2}`,
                                               }
-                                            : {}
+                                            : {
+                                                  backgroundColor: '#ffd400',
+                                                  color: 'black',
+                                              }
                                     }
                                     auto
                                     scale={0.6}
                                 >
-                                    <Text small>{provider.walletAddress}</Text>
-                                </Button>
+                                    <Text small>
+                                        <b>{provider.walletAddress}</b>
+                                    </Text>
+                                </Button>}
                             </Popover>
                         ) : (
                             <Button
                                 onClick={connectWalletHandler}
-                                type="secondary"
                                 style={
                                     sticky
                                         ? {
+                                              backgroundColor: '#ffd400',
+                                              color: 'black',
                                               top: '0px',
                                               borderColor: `${theme.palette.accents_2}`,
                                           }
-                                        : {}
+                                        : {
+                                              backgroundColor: '#ffd400',
+                                              color: 'black',
+                                          }
                                 }
                                 auto
                                 scale={0.6}
                             >
-                                <Text small>Connect Metamask Wallet</Text>
+                                <Text small>
+                                    <b>Connect Metamask Wallet</b>
+                                </Text>
                             </Button>
                         )
                     ) : (
@@ -218,14 +235,16 @@ const HeaderOptions = () => {
                                           borderColor: `${theme.palette.accents_2}`,
                                       }
                                     : {
-													backgroundColor: '#ffd400',
+                                          backgroundColor: '#ffd400',
                                           color: 'black',
-												}
+                                      }
                             }
                             auto
                             scale={0.6}
                         >
-                            <Text small>Wrong Network</Text>
+                            <Text small>
+                                <b>Wrong Network</b>
+                            </Text>
                         </Button>
                     )}
                 </div>

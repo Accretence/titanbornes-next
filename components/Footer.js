@@ -45,38 +45,38 @@ const Footer = () => {
 							<ul>
 								<li>
 									<GeistLink
-										target="_blank"
-										rel="noopener"
+										// target="_blank"
+										// rel="noopener"
 										href="/"
 									>
-										LooksRare [Coming Soon]
+										LooksRare [Soon]
 									</GeistLink>
 								</li>
 								<li>
 									<GeistLink
-										target="_blank"
-										rel="noopener"
+										// target="_blank"
+										// rel="noopener"
 										href="/"
 									>
-										X2Y2 [Coming Soon]
+										X2Y2 [Soon]
 									</GeistLink>
 								</li>
 								<li>
 									<GeistLink
-										target="_blank"
-										rel="noopener"
+										// target="_blank"
+										// rel="noopener"
 										href="/"
 									>
-										Rarible [Coming Soon]
+										Rarible [Soon]
 									</GeistLink>
 								</li>
 								<li>
 									<GeistLink
-										target="_blank"
-										rel="noopener"
+										// target="_blank"
+										// rel="noopener"
 										href="/"
 									>
-										OpenSea [Coming Soon]
+										OpenSea [Soon]
 									</GeistLink>
 								</li>
 							</ul>
@@ -85,29 +85,29 @@ const Footer = () => {
 							<ul>
 								<li>
 									<GeistLink
-										target="_blank"
-										rel="noopener"
+										// target="_blank"
+										// rel="noopener"
 										href="/"
 									>
-										Etherscan Contract [Coming Soon]
+										Contract [Soon]
 									</GeistLink>
 								</li>
 								<li>
 									<GeistLink
-										target="_blank"
-										rel="noopener"
+										// target="_blank"
+										// rel="noopener"
 										href="/"
 									>
-										Subgraph [Coming Soon]
+										Contract Audit [Soon]
 									</GeistLink>
 								</li>
 								<li>
 									<GeistLink
-										target="_blank"
-										rel="noopener"
+										// target="_blank"
+										// rel="noopener"
 										href="/"
 									>
-										Contract Audit [Coming Soon]
+										Subgraph [Soon]
 									</GeistLink>
 								</li>
 								<li>
