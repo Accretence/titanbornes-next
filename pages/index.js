@@ -68,10 +68,10 @@ const Index = () => {
                                 <Grid xs={24}>
                                     <Card px={0.1} pt={0.1} width="100%">
                                         <Text h6 my={0}>
-                                            Reapers Titanborne
+                                            Tricksters Titanborne
                                         </Text>
                                         <Text type="secondary" small>
-                                            Fusion Count: 0
+                                            Fusion Count: 4
                                         </Text>
                                     </Card>
                                 </Grid>
@@ -98,7 +98,7 @@ const Index = () => {
                                             Reapers Titanborne
                                         </Text>
                                         <Text type="secondary" small>
-                                            Fusion Count: 0
+                                            Fusion Count: 2
                                         </Text>
                                     </Card>
                                 </Grid>
