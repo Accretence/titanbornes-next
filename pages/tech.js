@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import Meta from '../utils/meta'
+import Meta from '../components/meta'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
 import Badged from '../components/Badged'
@@ -28,22 +28,12 @@ const Tech = () => {
                 <div style={{ marginTop: '2rem', marginBottom: '3rem' }}>
                     <Text h2>Tech </Text>
                     <Grid.Container gap={3}>
-                        <Grid xs={12}>
+                        <Grid xs={18}>
                             <Text small>
                                 Interesting things we are doing on the
                                 technology side. We'll gradually give more
                                 details after we publish our Smart Contract and
                                 announce upcoming features.
-                            </Text>
-                        </Grid>
-                        <Grid xs={12}>
-                            <Text small>
-                                For security measures & keeping our community
-                                safe from sophisticated scams, we cannot
-                                open-source our tech-stack but moving forward,
-                                we'll be gradually publishing what we've built
-                                and we are looking forward to see what can be
-                                built on top of it!
                             </Text>
                         </Grid>
                     </Grid.Container>
@@ -52,6 +42,16 @@ const Tech = () => {
             <Spacer />
             <div className="PageWrapper">
                 <div className="PageContent">
+                    <Card mb={1} className="WikiContent">
+                        <Text h3>ON-SOURCE</Text>
+                        <Text small>
+                            For security measures & keeping our community safe
+                            from sophisticated scams, we cannot open-source our
+                            tech-stack but moving forward, we'll be gradually
+                            publishing what we've built and we are looking
+                            forward to see what can be built on top of it!
+                        </Text>
+                    </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>ON-CHAIN ATTRIBUTES</Text>
                         <Text small>
@@ -65,10 +65,9 @@ const Tech = () => {
                     <Card mb={1} className="WikiContent">
                         <Text h3>SEPARATE WHITELISTS FOR FACTIONS</Text>
                         <Text small>
-                            If you're{' '}
-                            <Badged c="WHITELISTED"/>{' '}
-                            and mint in the 24h presale window, your NFT will
-                            have the same faction as your Discord role!
+                            If you're <Badged c="WHITELISTED" /> and mint in the
+                            24h presale window, your NFT will have the same
+                            faction as your Discord role!
                         </Text>
                     </Card>
                     <Card mb={1} className="WikiContent">

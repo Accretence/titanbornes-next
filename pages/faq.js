@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 // Components
-import Meta from '../utils/meta'
+import Meta from '../components/meta'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
 import Badged from '../components/Badged'

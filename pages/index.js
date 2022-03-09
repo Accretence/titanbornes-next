@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import Meta from '../utils/meta'
+import Meta from '../components/meta'
 import Header from '../components/header/Header.js'
 import Footer from '../components/Footer'
 import YouTube from '../components/YouTube'
@@ -41,10 +41,9 @@ const Index = () => {
                     <Text small>
                         Titanbornes is an experimental NFT Collection trying to
                         do things a little differently. What if your NFT{' '}
-                        <Badged c="EVOLVED"/>{' '}
-                        in each transaction? What if a collection's supply{' '}
-                        <Badged c="DECREMENTED"/>{' '}
-                        after every transaction?
+                        <Badged c="EVOLVED" /> in each transaction? What if a
+                        collection's supply <Badged c="DECREMENTED" /> after
+                        every transaction?
                     </Text>
                 </div>
             </div>
@@ -52,54 +51,70 @@ const Index = () => {
                 <div className="PageContent">
                     <Grid.Container mb={0} gap={1}>
                         <Grid xs={24} sm={12}>
-                            <Card px={0.1} pt={0.1}>
-                                <Image
-                                    src="https://user-images.githubusercontent.com/45223699/156929802-c6d69687-975e-4e82-b7ba-b716d22126bb.jpg"
-                                    style={{
-                                        objectFit: 'cover',
-                                    }}
-                                    my={0}
-                                    py={0}
-                                    draggable={false}
-                                />
-                                <Text h6 my={0}>
-                                    Reapers Titanborne
-                                </Text>
-                                <Text type="secondary" small>
-                                    Fusion Count: 0
-                                </Text>
-                            </Card>
+                            <Grid.Container gap={1}>
+                                <Grid xs={24}>
+                                    <Image
+                                        src="https://user-images.githubusercontent.com/45223699/156929802-c6d69687-975e-4e82-b7ba-b716d22126bb.jpg"
+                                        height="100%"
+                                        width="100%"
+                                        style={{
+                                            objectFit: 'cover',
+                                        }}
+                                        my={0}
+                                        py={0}
+                                        draggable={false}
+                                    />
+                                </Grid>
+                                <Grid xs={24}>
+                                    <Card px={0.1} pt={0.1} width="100%">
+                                        <Text h6 my={0}>
+                                            Reapers Titanborne
+                                        </Text>
+                                        <Text type="secondary" small>
+                                            Fusion Count: 0
+                                        </Text>
+                                    </Card>
+                                </Grid>
+                            </Grid.Container>
                         </Grid>
                         <Grid xs={24} sm={12}>
-                            <Card px={0.1} pt={0.1}>
-                                <Image
-                                    src="https://user-images.githubusercontent.com/45223699/156929160-cad93e7c-e31b-44b3-a79e-6d746825add8.jpg"
-                                    style={{
-                                        objectFit: 'cover',
-                                    }}
-                                    my={0}
-                                    py={0}
-                                    draggable={false}
-                                />
-                                <Text h6 my={0}>
-                                    Tricksters Titanborne
-                                </Text>
-                                <Text type="secondary" small>
-                                    Fusion Count: 3
-                                </Text>
-                            </Card>
+                            <Grid.Container gap={1}>
+                                <Grid xs={24}>
+                                    <Image
+                                        src="https://user-images.githubusercontent.com/45223699/156929160-cad93e7c-e31b-44b3-a79e-6d746825add8.jpg"
+                                        height="100%"
+                                        width="100%"
+                                        style={{
+                                            objectFit: 'cover',
+                                        }}
+                                        my={0}
+                                        py={0}
+                                        draggable={false}
+                                    />
+                                </Grid>
+                                <Grid xs={24}>
+                                    <Card px={0.1} pt={0.1} width="100%">
+                                        <Text h6 my={0}>
+                                            Reapers Titanborne
+                                        </Text>
+                                        <Text type="secondary" small>
+                                            Fusion Count: 0
+                                        </Text>
+                                    </Card>
+                                </Grid>
+                            </Grid.Container>
                         </Grid>
                         <Grid xs={24}>
                             <Card>
                                 <Text h3>WHAT'S GOING ON HERE? 👆</Text>
                                 <Text small>
                                     Each single sale in this collection can
-                                    trigger a <Badged c="FUSION"/>{' '}, evolving the buyer's NFT &
-                                    burning the sold NFT. This <Badged c="DECREMENTS"/>{' '} the
-                                    entire supply of the collection and raises
-                                    the rarity of all NFTs still in circulation.
-                                    This is deflationary-supply taken to the
-                                    extreme!
+                                    trigger a <Badged c="FUSION" /> , evolving
+                                    the buyer's NFT & burning the sold NFT. This{' '}
+                                    <Badged c="DECREMENTS" /> the entire supply
+                                    of the collection and raises the rarity of
+                                    all NFTs still in circulation. This is
+                                    deflationary-supply taken to the extreme!
                                     <br />
                                     <br />
                                     This 👇 video thoroughly explains the
@@ -114,19 +129,18 @@ const Index = () => {
                             <Card>
                                 <Text h3>HOW DO I EARN A WHITELIST SPOT?</Text>
                                 <Text small>
-                                    How do I earn a whitelist position? There
-                                    are 4,000 whitelist spots in total
+                                    There are 4,000 whitelist spots in total
                                     represented by each faction's ICHOR points.{' '}
-                                    <Badged c="REAPERS"/>{' '}
-                                    and{' '}
-                                    <Badged c="TRICKSTERS"/>{' '}
-                                    factions compete for those whitelist spots.
-                                    If 2 factions perform similarly each will
-                                    get 2,000 spots but if one outpeforms the
-                                    other, it can get much more.
+                                    <Badged c="REAPERS" /> and{' '}
+                                    <Badged c="TRICKSTERS" /> factions compete
+                                    for those whitelist spots. If 2 factions
+                                    perform similarly each will get 2,000 spots
+                                    but if one outpeforms the other, it can get
+                                    much more.
                                     <br />
                                     <br />
-                                    This 👇 video thoroughly explains how our whitelisting system works.
+                                    This 👇 video thoroughly explains how our
+                                    whitelisting system works.
                                 </Text>
                             </Card>
                         </Grid>

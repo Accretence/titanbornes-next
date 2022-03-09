@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import Meta from '../utils/meta'
+import Meta from '../components/meta'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
 

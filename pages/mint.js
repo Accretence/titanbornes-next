@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import useState from 'react-usestateref'
 
 // Components
-import Meta from '../utils/meta'
+import Meta from '../components/meta'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
 

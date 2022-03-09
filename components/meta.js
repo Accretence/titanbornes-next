@@ -25,7 +25,7 @@ const Meta = ({ title, url, description, keywords, image }) => {
 			{/* <meta name="og:image" content={image} /> */}
 
 			<meta name="og:url" content={url} />
-			<meta name="keyword" content={keywords} />
+			<meta name="keyword" content='ethereum, blockchain, cryptocurrency, NFT' />
 		</Head>
 	)
 }
@@ -34,8 +34,7 @@ Meta.defaultProps = {
 	title: 'Titanbornes',
 	url: 'https://titanbornes.com',
 	description: 'Experimental NFT Project',
-	keywords: 'blockchain, cryptocurrency, NFTs',
-	image: 'https://user-images.githubusercontent.com/45223699/151791982-78605257-20fb-49af-9d3e-08d324f98b25.png',
+	image: 'https://user-images.githubusercontent.com/45223699/157456186-5ab26bd2-9246-4e3a-9845-673f8375ba1e.png',
 }
 
 export default Meta
