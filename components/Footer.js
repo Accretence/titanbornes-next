@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import {
 	Text,
-	Badge,
 	Grid,
 	Link as GeistLink,
 	useTheme,

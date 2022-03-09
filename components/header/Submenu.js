@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-import HeaderOptions from './HeaderOptions'
-
+// Libraries
 import { Tabs, Badge, useTheme } from '@geist-ui/core'
+
+// Components
+import HeaderOptions from './HeaderOptions'
 
 const Submenu = () => {
 	const router = useRouter()

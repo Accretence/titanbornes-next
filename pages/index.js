@@ -5,11 +5,11 @@ import Meta from '../utils/meta'
 import Header from '../components/header/Header.js'
 import Footer from '../components/Footer'
 import YouTube from '../components/YouTube'
+import Badged from '../components/Badged'
 
 // Libraries
 import {
     useTheme,
-    Badge,
     Grid,
     Card,
     Image,
@@ -41,23 +41,9 @@ const Index = () => {
                     <Text small>
                         Titanbornes is an experimental NFT Collection trying to
                         do things a little differently. What if your NFT{' '}
-                        <Badge
-                            style={{
-                                backgroundColor: '#ffd400',
-                                color: 'black',
-                            }}
-                        >
-                            <b>EVOLVED</b>
-                        </Badge>{' '}
+                        <Badged c="EVOLVED"/>{' '}
                         in each transaction? What if a collection's supply{' '}
-                        <Badge
-                            style={{
-                                backgroundColor: '#ffd400',
-                                color: 'black',
-                            }}
-                        >
-                            <b>DECREMENTED</b>
-                        </Badge>{' '}
+                        <Badged c="DECREMENTED"/>{' '}
                         after every transaction?
                     </Text>
                 </div>
@@ -108,22 +94,8 @@ const Index = () => {
                                 <Text h3>WHAT'S GOING ON HERE? 👆</Text>
                                 <Text small>
                                     Each single sale in this collection can
-                                    trigger a <Badge
-                                        style={{
-                                            backgroundColor: '#ffd400',
-                                            color: 'black',
-                                        }}
-                                    >
-                                        <b>FUSION</b>
-                                    </Badge>{' '}, evolving the buyer's NFT &
-                                    burning the sold NFT. This <Badge
-                                        style={{
-                                            backgroundColor: '#ffd400',
-                                            color: 'black',
-                                        }}
-                                    >
-                                        <b>DECREMENTS</b>
-                                    </Badge>{' '} the
+                                    trigger a <Badged c="FUSION"/>{' '}, evolving the buyer's NFT &
+                                    burning the sold NFT. This <Badged c="DECREMENTS"/>{' '} the
                                     entire supply of the collection and raises
                                     the rarity of all NFTs still in circulation.
                                     This is deflationary-supply taken to the
@@ -145,23 +117,9 @@ const Index = () => {
                                     How do I earn a whitelist position? There
                                     are 4,000 whitelist spots in total
                                     represented by each faction's ICHOR points.{' '}
-                                    <Badge
-                                        style={{
-                                            backgroundColor: '#ffd400',
-                                            color: 'black',
-                                        }}
-                                    >
-                                        <b>Reapers</b>
-                                    </Badge>{' '}
+                                    <Badged c="REAPERS"/>{' '}
                                     and{' '}
-                                    <Badge
-                                        style={{
-                                            backgroundColor: '#ffd400',
-                                            color: 'black',
-                                        }}
-                                    >
-                                        <b>Tricksters</b>
-                                    </Badge>{' '}
+                                    <Badged c="TRICKSTERS"/>{' '}
                                     factions compete for those whitelist spots.
                                     If 2 factions perform similarly each will
                                     get 2,000 spots but if one outpeforms the

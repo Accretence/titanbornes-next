@@ -5,9 +5,10 @@ import Link from 'next/link'
 import Meta from '../utils/meta'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
+import Badged from '../components/Badged'
 
-// Additional Libraries
-import { useTheme, Text, Badge, Image, Spacer, Card } from '@geist-ui/core'
+// Libraries
+import { useTheme, Text, Card } from '@geist-ui/core'
 
 const FAQ = () => {
     const theme = useTheme()
@@ -30,23 +31,8 @@ const FAQ = () => {
                         <Text small>
                             Experimental NFT Collection trying to do things a
                             little differently. What if your NFT{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                <b>EVOLVED</b>
-                            </Badge>{' '}
-                            in each transaction? What if a collection's supply{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                <b>DECREMENTED</b>
-                            </Badge>{' '}
+                            <Badged c="EVOVLED" /> in each transaction? What if
+                            a collection's supply <Badged c="DECREMENTED" />{' '}
                             after every transaction?
                         </Text>
                     </Card>
@@ -69,15 +55,8 @@ const FAQ = () => {
                         <Text h3>What is the minting price?</Text>
                         <Text small>
                             0.08 ETH. The mint will be FREE for top %10 of{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                <b>Whitelisted</b>
-                            </Badge>{' '}
-                            players in each faction's leaderboard.
+                            <Badged c="WHITELISTED" /> players in each faction's
+                            leaderboard.
                         </Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
@@ -88,25 +67,9 @@ const FAQ = () => {
                         <Text h3>When can I mint?</Text>
                         <Text small>
                             ~ 48 hours after 4,000 ICHOR points is mined
-                            collectively by both{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Reapers
-                            </Badge>{' '}
-                            and{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Tricksters
-                            </Badge>{' '}
-                            factions in our Discord game.
+                            collectively by both <Badged c="REAPERS" /> and{' '}
+                            <Badged c="TRICKSTERS" /> factions in our Discord
+                            game.
                         </Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
@@ -119,16 +82,9 @@ const FAQ = () => {
                         </Text>
                         <Text small>
                             All 4,000 tokens will be available to mint by{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Whitelisted
-                            </Badge>{' '}
-                            members in a 24h window, after which any unminted
-                            supply will be available to mint publicly.
+                            <Badged c="WHITELISTED" /> members in a 24h window,
+                            after which any unminted supply will be available to
+                            mint publicly.
                         </Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
@@ -138,16 +94,7 @@ const FAQ = () => {
                             <Link href="/whitelist" color>
                                 whitelist
                             </Link>{' '}
-                            to learn how to become{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Whitelisted
-                            </Badge>
-                            .
+                            to learn how to become <Badged c="WHITELISTED" />.
                         </Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
@@ -157,14 +104,7 @@ const FAQ = () => {
                         </Text>
                         <Text small>
                             Yes, but only if you're{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Whitelisted
-                            </Badge>{' '}
+                            <Badged c="WHITELISTED" />{' '}
                             and mint in the 24h presale window.
                         </Text>
                     </Card>

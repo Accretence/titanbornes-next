@@ -47,7 +47,7 @@ const UserPopover = () => {
                             }}
                             scale={0.8}
                         >
-                            Logout
+                            <b>Logout</b>
                         </Button>
                     </Popover.Item>
                 </div>

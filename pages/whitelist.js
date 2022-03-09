@@ -4,12 +4,12 @@ import React from 'react'
 import Meta from '../utils/meta'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
+import Badged from '../components/Badged'
 
 // Additional Libraries
 import {
 	useTheme,
 	Text,
-	Badge,
 	Code,
 	Image,
 	Spacer,
@@ -42,22 +42,8 @@ const Whitelist = () => {
 						<Text h3>How EXACTLY does it work?</Text>
 						<Text small>
 							There are 4,000 whitelist spots in total represented
-							by each faction's ICHOR points. <Badge
-								style={{
-									backgroundColor: '#ffd400',
-									color: 'black',
-								}}
-							>
-								<b>Reapers</b>
-							</Badge> and
-							{' '}<Badge
-								style={{
-									backgroundColor: '#ffd400',
-									color: 'black',
-								}}
-							>
-								<b>Tricksters</b>
-							</Badge> factions compete for those whitelist
+							by each faction's ICHOR points. <Badged c="REAPERS"/> and
+							{' '}<Badged c="TRICKSTERS"/> factions compete for those whitelist
 							spots. If 2 factions perform similarly each will get
 							2,000 spots but if one outpeforms the other, it can
 							get much more.
@@ -75,14 +61,7 @@ const Whitelist = () => {
 							faction has 3,000 spots, you have to be among the
 							top 3,000 players in your faction's leaderboard to
 							become{' '}
-							<Badge
-								style={{
-									backgroundColor: '#ffd400',
-									color: 'black',
-								}}
-							>
-								Whitelisted
-							</Badge>
+							<Badged c="WHITELISTED"/>
 							. You can check your ranking with the <Code>/leaderboard</Code>
 							command.
 						</Text>
@@ -98,14 +77,7 @@ const Whitelist = () => {
 					<Card mb={1} className="WikiContent">
 						<Text h3>What is ICHOR?</Text>
 						<Text small>
-							Each ICHOR represents a single <Badge
-								style={{
-									backgroundColor: '#ffd400',
-									color: 'black',
-								}}
-							>
-								Whitelisted
-							</Badge> spot for that
+							Each ICHOR represents a single <Badged c="WHITELISTED"/> spot for that
 							faction.
 						</Text>
 					</Card>
@@ -118,14 +90,7 @@ const Whitelist = () => {
 					<Card mb={1} className="WikiContent">
 						<Text h3>Can I choose my faction?</Text>
 						<Text small>
-							No. Faction roles are assigned randomly by <Badge
-								style={{
-									backgroundColor: 'darkkhaki',
-									color: 'white',
-								}}
-							>
-								Titanbornes-Reception-Bot
-							</Badge>{' '}
+							No. Faction roles are assigned randomly by <Badged c="Titanbornes-Reception-Bot"/>{' '}
 							in our Discord server and cannot be changed.
 						</Text>
 					</Card>

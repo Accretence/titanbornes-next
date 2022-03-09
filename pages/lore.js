@@ -4,12 +4,12 @@ import React from 'react'
 import Meta from '../utils/meta'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
+import Badged from '../components/Badged'
 
 // Additional Libraries
 import {
     useTheme,
     Text,
-    Badge,
     Image,
     Spacer,
     Card,
@@ -29,14 +29,7 @@ const Lore = () => {
 
                     <Text small>
                         This is a community owned project.{' '}
-                        <Badge
-                            style={{
-                                backgroundColor: '#ffd400',
-                                color: 'black',
-                            }}
-                        >
-                            Founders
-                        </Badge>{' '}
+                        <Badged c="FOUNDERS"/>{' '}
                         pushed it into existence but we will all shape it
                         together with our discussions, interactions, Discord
                         polls and if need be, DAO voting.
@@ -54,23 +47,9 @@ const Lore = () => {
                             Titans, buried in a large, undiscovered and
                             beautiful Crypt. They divide themselves into 2
                             factions;{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Reapers
-                            </Badge>{' '}
+                            <Badged c="REAPERS"/>{' '}
                             and{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Tricksters
-                            </Badge>
+                            <Badged c="TRICKSTERS"/>
                             . They don't harbor any malice for each other but
                             prefer to stay with their own.
                         </Text>
@@ -82,28 +61,14 @@ const Lore = () => {
                             knows where they came from and where they've gone
                             to. The first and only children they birthed out of
                             their own bodies were the{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Nightmares
-                            </Badge>{' '}
+                            <Badged c="NIGHTMARES"/>{' '}
                             but they immediately knew what abominations they had
                             created and vowed to never birth children out of
                             their own flesh. They knew they had to contain the
                             evil and imprisoned the Nightmares. They poured
                             their own blood into a mountain and made it flow
                             through a fountain which birthed{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Titanbornes
-                            </Badge>{' '}
+                            <Badged c="TITANBORNES"/>{' '}
                             to create the only possible being capable of taking
                             on the Nightmares if they ever escaped their
                             captivity.
@@ -112,24 +77,10 @@ const Lore = () => {
                     <Card mb={1} className="WikiContent">
                         <Text h3>What are the 2 factions?</Text>
                         <Text small>
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Reapers
-                            </Badge>{' '}
+                            <Badged c="REAPERS"/>{' '}
                             are more powerful and adept to battle.
                             <br />
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Tricksters
-                            </Badge>{' '}
+                            <Badged c="TRICKSTERS"/>{' '}
                             are the smartest and more shrewd.
                         </Text>
                     </Card>
@@ -143,27 +94,13 @@ const Lore = () => {
                             oldest artifacts known to man who one day found a
                             bizarre artifact that made her come in contact with
                             a voice that introduced themeselves as{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Nightmares
-                            </Badge>
+                            <Badged c="NIGHTMARES"/>
                             . They tell the story of creation to Z, how the
                             Titans created the world and how they birthed their
                             first childs, Nightmares from their own bodies and
                             imprisoned them soon after they were born. How the
                             Titans created the{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Titanbornes
-                            </Badge>{' '}
+                            <Badged c="TITANBORNES"/>{' '}
                             to destroy their own first childs if they ever
                             escaped their captivity. Nightmares created an
                             amulet just before they were imprisoned, an amulet
@@ -182,14 +119,7 @@ const Lore = () => {
                             the end of life on earth. The tablet describes them
                             as abominations exiled from face of the earth
                             millenias ago.{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Titanbornes
-                            </Badge>{' '}
+                            <Badged c="TITANBORNES"/>{' '}
                             believe themeselves to be gentle and just creatures
                             wrongfully robbed of living for thousands of years.
                             They decide to find their way out of the Crypt and

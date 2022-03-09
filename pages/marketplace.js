@@ -9,7 +9,6 @@ import Footer from '../components/Footer'
 import {
 	useTheme,
 	Text,
-	Badge,
 	Image,
 	Spacer,
 	Card,

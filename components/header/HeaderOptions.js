@@ -178,7 +178,7 @@ const HeaderOptions = () => {
                                 placement="bottomEnd"
                                 portalClassName="UserSettingsPopover"
                             >
-                                {!sticky && <Button
+                                <Button
                                     style={
                                         sticky
                                             ? {
@@ -196,9 +196,9 @@ const HeaderOptions = () => {
                                     scale={0.6}
                                 >
                                     <Text small>
-                                        <b>{provider.walletAddress}</b>
+                                        <b>Connected</b>
                                     </Text>
-                                </Button>}
+                                </Button>
                             </Popover>
                         ) : (
                             <Button

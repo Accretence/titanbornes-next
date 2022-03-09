@@ -4,12 +4,12 @@ import React from 'react'
 import Meta from '../utils/meta'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
+import Badged from '../components/Badged'
 
 // Additional Libraries
 import {
     useTheme,
     Text,
-    Badge,
     Image,
     Spacer,
     Card,
@@ -66,14 +66,7 @@ const Tech = () => {
                         <Text h3>SEPARATE WHITELISTS FOR FACTIONS</Text>
                         <Text small>
                             If you're{' '}
-                            <Badge
-                                style={{
-                                    backgroundColor: '#ffd400',
-                                    color: 'black',
-                                }}
-                            >
-                                Whitelisted
-                            </Badge>{' '}
+                            <Badged c="WHITELISTED"/>{' '}
                             and mint in the 24h presale window, your NFT will
                             have the same faction as your Discord role!
                         </Text>
