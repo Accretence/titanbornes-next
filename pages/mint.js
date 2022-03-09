@@ -66,7 +66,7 @@ const Mint = () => {
 			)
 
 			const response = await contract.safeMint(
-				merkleTree.getHexProof(keccak256(provider.walletAddress))
+				merkleTree.getHexProof(keccak256(provider.address))
 			)
 
 			if (response.hash) {
@@ -106,9 +106,9 @@ const Mint = () => {
 			)
 
 			const response = await contract.isWhitelisted(
-				merkleTree.getHexProof(keccak256(provider.walletAddress)),
+				merkleTree.getHexProof(keccak256(provider.address)),
 				rootHash,
-				provider.walletAddress
+				provider.address
 			)
 
 			if (response) {

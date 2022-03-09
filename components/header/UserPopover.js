@@ -25,12 +25,12 @@ const UserPopover = () => {
 
     return (
         <>
-            {provider.walletAddress && (
+            {provider.address && (
                 <div>
                     <Popover.Item title mb="0.9">
                         <Description
                             title={'Wallet Address'}
-                            content={`${provider.walletAddress.slice(
+                            content={`${provider.address.slice(
                                 0,
                                 21
                             )}...`}

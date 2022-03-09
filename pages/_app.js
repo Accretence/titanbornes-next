@@ -12,53 +12,64 @@ import { ProviderContext } from '../state/context/providerContext'
 import '../utils/icons'
 
 export default function App({ Component, pageProps }) {
-	// Local State
-	const [themeType, setThemeType] = useState('dark')
-	const [provider, setProvider] = useState(null)
+    // Local State
+    const [themeType, setThemeType] = useState('dark')
+    const [provider, setProvider] = useState(null)
 
-	useEffect(() => {
-		if (typeof window !== 'undefined' && window.localStorage) {
-			// Get theme
-			document.documentElement.removeAttribute('style')
-			document.body.removeAttribute('style')
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.localStorage) {
+            // Get theme
+            document.documentElement.removeAttribute('style')
+            document.body.removeAttribute('style')
 
-			const theme = window.localStorage.getItem('theme')
-			if (themes.includes(theme)) setThemeType(theme)
+            const theme = window.localStorage.getItem('theme')
+            if (themes.includes(theme)) setThemeType(theme)
 
-			// Get logged-in user
-			if (
-				window.ethereum &&
-				window.localStorage.getItem('currentUserInfo')
-			) {
-				const localStoragedWalletAddress = JSON.parse(
-					window.localStorage.getItem('currentUserInfo')
-				)
+            // Get logged-in user
+            if (
+                window.ethereum &&
+                window.localStorage.getItem('currentUserInfo')
+            ) {
+                const localStoragedWalletAddress = JSON.parse(
+                    window.localStorage.getItem('currentUserInfo')
+                )
 
-				if (localStoragedWalletAddress && typeof localStoragedWalletAddress === 'string') {
-					console.log("Reading from localStorage")
-					setProvider({
-						provider: new ethers.providers.Web3Provider(window.ethereum), walletAddress: localStoragedWalletAddress,
-						correctChain: window.ethereum.chainId == process.env.NEXT_PUBLIC_CHAINID ? true : false
-					})
-				}
-			}
-		}
-	}, [])
+                if (
+                    localStoragedWalletAddress &&
+                    typeof localStoragedWalletAddress === 'string'
+                ) {
+                    console.log('Reading from localStorage')
+                    setProvider({
+								connected: true,
+                        provider: new ethers.providers.Web3Provider(
+                            window.ethereum
+                        ),
+                        address: localStoragedWalletAddress,
+                        correctChain:
+                            window.ethereum.chainId ==
+                            process.env.NEXT_PUBLIC_CHAINID
+                                ? true
+                                : false,
+                    })
+                }
+            }
+        }
+    }, [])
 
-	const switchTheme = useCallback((theme) => {
-		setThemeType(theme)
-		if (typeof window !== 'undefined' && window.localStorage)
-			window.localStorage.setItem('theme', theme)
-	}, [])
+    const switchTheme = useCallback((theme) => {
+        setThemeType(theme)
+        if (typeof window !== 'undefined' && window.localStorage)
+            window.localStorage.setItem('theme', theme)
+    }, [])
 
-	return (
-			<ProviderContext.Provider value={{ provider, setProvider }}>
-				<GeistProvider themeType={themeType}>
-					<CssBaseline />
-					<ThemeContext.Provider value={{ themeType, switchTheme }}>
-						<Component {...pageProps} />
-					</ThemeContext.Provider>
-				</GeistProvider>
-			</ProviderContext.Provider>
-	)
+    return (
+        <ProviderContext.Provider value={{ provider, setProvider }}>
+            <GeistProvider themeType={themeType}>
+                <CssBaseline />
+                <ThemeContext.Provider value={{ themeType, switchTheme }}>
+                    <Component {...pageProps} />
+                </ThemeContext.Provider>
+            </GeistProvider>
+        </ProviderContext.Provider>
+    )
 }

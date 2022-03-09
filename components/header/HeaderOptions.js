@@ -80,15 +80,16 @@ const HeaderOptions = () => {
                 JSON.stringify(newWalletAddress)
             )
             setProvider({
+                connected: true,
                 provider: new ethers.providers.Web3Provider(window.ethereum),
-                walletAddress: newWalletAddress,
+                address: newWalletAddress,
                 correctChain:
                     window.ethereum.chainId == process.env.NEXT_PUBLIC_CHAINID
                         ? true
                         : false,
             })
             setToast({
-                text: 'Wallet connection successful...',
+                text: 'Wallet connected...',
                 type: 'warning',
             })
         }
@@ -104,6 +105,88 @@ const HeaderOptions = () => {
 
             window.ethereum.on('chainChanged', chainChangedHandler)
         }
+    }
+
+    const Connected = () => {
+        return (
+            <Popover
+                pb="0.5"
+                content={<UserPopover />}
+                placement="bottomEnd"
+                portalClassName="UserSettingsPopover"
+            >
+                <Button
+                    style={
+                        sticky
+                            ? {
+                                  backgroundColor: '#ffd400',
+                                  color: 'black',
+                                  top: '0px',
+                                  borderColor: `${theme.palette.accents_2}`,
+                              }
+                            : {
+                                  backgroundColor: '#ffd400',
+                                  color: 'black',
+                              }
+                    }
+                    auto
+                    scale={0.6}
+                >
+                    <Text small>
+                        <b>Connected</b>
+                    </Text>
+                </Button>
+            </Popover>
+        )
+    }
+
+    const PleaseConnect = () => {
+        return <Button
+            onClick={connectWalletHandler}
+            style={
+                sticky
+                    ? {
+                          backgroundColor: '#ffd400',
+                          color: 'black',
+                          top: '0px',
+                          borderColor: `${theme.palette.accents_2}`,
+                      }
+                    : {
+                          backgroundColor: '#ffd400',
+                          color: 'black',
+                      }
+            }
+            auto
+            scale={0.6}
+        >
+            <Text small>
+                <b>Connect Metamask Wallet</b>
+            </Text>
+        </Button>
+    }
+
+    const WrongNetwork = () => {
+        return <Button
+            style={
+                sticky
+                    ? {
+                          backgroundColor: '#ffd400',
+                          color: 'black',
+                          top: '0px',
+                          borderColor: `${theme.palette.accents_2}`,
+                      }
+                    : {
+                          backgroundColor: '#ffd400',
+                          color: 'black',
+                      }
+            }
+            auto
+            scale={0.6}
+        >
+            <Text small>
+                <b>Wrong Network</b>
+            </Text>
+        </Button>
     }
 
     return (
@@ -169,83 +252,15 @@ const HeaderOptions = () => {
 
             {metamaskAvailable && (
                 <div style={{ display: 'inline' }}>
-                    {window.ethereum.chainId ==
-                    process.env.NEXT_PUBLIC_CHAINID ? (
-                        provider ? (
-                            <Popover
-                                pb="0.5"
-                                content={<UserPopover />}
-                                placement="bottomEnd"
-                                portalClassName="UserSettingsPopover"
-                            >
-                                <Button
-                                    style={
-                                        sticky
-                                            ? {
-                                                  backgroundColor: '#ffd400',
-                                                  color: 'black',
-                                                  top: '0px',
-                                                  borderColor: `${theme.palette.accents_2}`,
-                                              }
-                                            : {
-                                                  backgroundColor: '#ffd400',
-                                                  color: 'black',
-                                              }
-                                    }
-                                    auto
-                                    scale={0.6}
-                                >
-                                    <Text small>
-                                        <b>Connected</b>
-                                    </Text>
-                                </Button>
-                            </Popover>
+                    {provider ? (
+                        window.ethereum.chainId ==
+                        process.env.NEXT_PUBLIC_CHAINID ? (
+                            <Connected />
                         ) : (
-                            <Button
-                                onClick={connectWalletHandler}
-                                style={
-                                    sticky
-                                        ? {
-                                              backgroundColor: '#ffd400',
-                                              color: 'black',
-                                              top: '0px',
-                                              borderColor: `${theme.palette.accents_2}`,
-                                          }
-                                        : {
-                                              backgroundColor: '#ffd400',
-                                              color: 'black',
-                                          }
-                                }
-                                auto
-                                scale={0.6}
-                            >
-                                <Text small>
-                                    <b>Connect Metamask Wallet</b>
-                                </Text>
-                            </Button>
+                            <WrongNetwork />
                         )
                     ) : (
-                        <Button
-                            style={
-                                sticky
-                                    ? {
-                                          backgroundColor: '#ffd400',
-                                          color: 'black',
-                                          top: '0px',
-                                          borderColor: `${theme.palette.accents_2}`,
-                                      }
-                                    : {
-                                          backgroundColor: '#ffd400',
-                                          color: 'black',
-                                      }
-                            }
-                            auto
-                            scale={0.6}
-                        >
-                            <Text small>
-                                <b>Wrong Network</b>
-                            </Text>
-                        </Button>
+                        <PleaseConnect />
                     )}
                 </div>
             )}
