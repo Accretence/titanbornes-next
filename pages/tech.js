@@ -43,7 +43,7 @@ const Tech = () => {
             <div className="PageWrapper">
                 <div className="PageContent">
                     <Card mb={1} className="WikiContent">
-                        <Text h3>ON-SOURCE</Text>
+                        <Text h3>OPEN-SOURCE</Text>
                         <Text small>
                             For security measures & keeping our community safe
                             from sophisticated scams, we cannot open-source our
