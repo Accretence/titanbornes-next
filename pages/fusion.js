@@ -29,9 +29,10 @@ const Fusion = () => {
                     Here you will find how our fusion works in Q&A format.
                 </Text>
             </div>
+            <Spacer/>
             <div className="PageWrapper">
                 <div className="PageContent">
-                    <Card mt={4} mb={1} className="WikiContent">
+                    <Card mb={1} className="WikiContent">
                         <Text h3>FUSION?</Text>
                         <Text small>
                             Fusion ( in NFT terms ) is usually a process of

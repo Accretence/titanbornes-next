@@ -43,16 +43,6 @@ const Tech = () => {
             <div className="PageWrapper">
                 <div className="PageContent">
                     <Card mb={1} className="WikiContent">
-                        <Text h3>OPEN-SOURCE</Text>
-                        <Text small>
-                            For security measures & keeping our community safe
-                            from sophisticated scams, we cannot open-source our
-                            tech-stack but moving forward, we'll be gradually
-                            publishing what we've built and we are looking
-                            forward to see what can be built on top of it!
-                        </Text>
-                    </Card>
-                    <Card mb={1} className="WikiContent">
                         <Text h3>ON-CHAIN ATTRIBUTES</Text>
                         <Text small>
                             Your NFT's FUSION COUNT and FACTION traits are
@@ -78,7 +68,7 @@ const Tech = () => {
                             ERC721 contract behaves in normal transfer calls.
                         </Text>
                     </Card>
-                    <Card className="WikiContent">
+                    <Card mb={1} className="WikiContent">
                         <Text h3>DYNAMIC RENDERING</Text>
                         <Text small>
                             We have to generate a new artwork for your NFT each
@@ -103,6 +93,14 @@ const Tech = () => {
                             bake your NFT's upgraded traits and artwork
                             completely on-the-fly based on your NFT's ON-CHAIN
                             attributes provided by our subgraph.
+                        </Text>
+                    </Card>
+                    <Card className="WikiContent">
+                        <Text h3>OPEN-SOURCE</Text>
+                        <Text small>
+                            After the mint we'll be gradually open-sourcing our
+                            tech-stack and we are looking forward to see what
+                            can be built on top of it!
                         </Text>
                     </Card>
                 </div>

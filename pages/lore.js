@@ -110,7 +110,7 @@ const Lore = () => {
                         </Text>
                     </Card>
                     <Card className="WikiContent">
-                        <Text h3>Chapter 00: Prologue</Text>
+                        <Text h3>Prologue</Text>
                         <Text small>
                             Z activates the amulet & Titanbornes awaken from
                             their slumber. They don't know how long or why they

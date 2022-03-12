@@ -32,7 +32,7 @@ const Submenu = () => {
 						>
 							<Tabs.Item
                 ml={0}
-								label={sticky ? 'TITANBORNES' : 'HOME'}
+								label={'HOME'}
 								value="/"
 							/>
 							<Tabs.Item label="FAQ" value="/faq" />
@@ -60,9 +60,6 @@ const Submenu = () => {
 								value="/marketplace"
 							/>
 						</Tabs>
-						<div className="headerOptions">
-							{sticky && <HeaderOptions />}
-						</div>
 					</div>
 				</div>
 			</nav>

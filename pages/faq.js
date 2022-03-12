@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 import Badged from '../components/Badged'
 
 // Libraries
-import { useTheme, Text, Card } from '@geist-ui/core'
+import { useTheme, Text, Card, Spacer } from '@geist-ui/core'
 
 const FAQ = () => {
     const theme = useTheme()
@@ -24,16 +24,17 @@ const FAQ = () => {
                     Titanbornes.
                 </Text>
             </div>
+            <Spacer/>
             <div className="PageWrapper">
                 <div className="PageContent">
-                    <Card mt={4} mb={1} className="WikiContent">
+                    <Card mb={1} className="WikiContent">
                         <Text h3>What is Titanbornes?</Text>
                         <Text small>
-                            Experimental NFT Collection trying to do things a
-                            little differently. What if your NFT{' '}
-                            <Badged c="EVOVLED" /> in each transaction? What if
-                            a collection's supply <Badged c="DECREMENTED" />{' '}
-                            after every transaction?
+                            <Badged c="FREE-TO-MINT" /> Experimental NFT
+                            Collection trying to do things a little differently.
+                            What if your NFT <Badged c="EVOVLED" /> in each of
+                            your transactions? What if a collection's supply{' '}
+                            <Badged c="DECREMENTED" /> after every transaction?
                         </Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
@@ -53,11 +54,7 @@ const FAQ = () => {
                     </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>What is the minting price?</Text>
-                        <Text small>
-                            0.08 ETH. The mint will be FREE for top %10 of{' '}
-                            <Badged c="WHITELISTED" /> players in each faction's
-                            leaderboard.
-                        </Text>
+                        <Text small>This collection will be <Badged c="FREE-TO-MINT!" /></Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>How many can I mint?</Text>
@@ -65,12 +62,7 @@ const FAQ = () => {
                     </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>When can I mint?</Text>
-                        <Text small>
-                            ~ 48 hours after 4,000 ICHOR points is mined
-                            collectively by both <Badged c="REAPERS" /> and{' '}
-                            <Badged c="TRICKSTERS" /> factions in our Discord
-                            game.
-                        </Text>
+                        <Text small>TBA.</Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>What blockchain?</Text>
@@ -103,8 +95,7 @@ const FAQ = () => {
                             role?
                         </Text>
                         <Text small>
-                            Yes, but only if you're{' '}
-                            <Badged c="WHITELISTED" />{' '}
+                            Yes, but only if you're <Badged c="WHITELISTED" />{' '}
                             and mint in the 24h presale window.
                         </Text>
                     </Card>

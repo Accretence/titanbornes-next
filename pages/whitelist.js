@@ -7,112 +7,73 @@ import Footer from '../components/Footer'
 import Badged from '../components/Badged'
 
 // Additional Libraries
-import {
-	useTheme,
-	Text,
-	Code,
-	Image,
-	Spacer,
-	Card,
-} from '@geist-ui/core'
+import { useTheme, Text, Code, Image, Spacer, Card } from '@geist-ui/core'
 
 const Whitelist = () => {
-	const theme = useTheme()
+    const theme = useTheme()
 
-	return (
-		<>
-			<Meta title="Whitelist" />
-			<Header />
-			<div className="PageHeader">
-				<Text h2>Whitelist</Text>
-				<Text small>
-					Here you will find how our whitelist works in Q&A format.
-				</Text>
-			</div>
-			<div className="PageWrapper">
-				<div className="PageContent">
-					<Card mt={4} mb={1} className="WikiContent">
-						<Text h3>How do I earn a whitelist position?</Text>
-						<Text small>
-							By playing our original Discord game and inviting
-							members to join this server.
-						</Text>
-					</Card>
-					<Card mb={1} className="WikiContent">
-						<Text h3>How EXACTLY does it work?</Text>
-						<Text small>
-							There are 4,000 whitelist spots in total represented
-							by each faction's ICHOR points. <Badged c="REAPERS"/> and
-							{' '}<Badged c="TRICKSTERS"/> factions compete for those whitelist
-							spots. If 2 factions perform similarly each will get
-							2,000 spots but if one outpeforms the other, it can
-							get much more.
-						</Text>
-					</Card>
-					<Card mb={1} className="WikiContent">
-						<Text h3>
-							My faction has 3,000 whitelist spots, how do I make
-							sure I have one of those spots?
-						</Text>
-						<Text small>
-							Each successful command helps the faction gather
-							resources but gives the player XP as well. These XPs
-							determine your ranking in your faction. So if your
-							faction has 3,000 spots, you have to be among the
-							top 3,000 players in your faction's leaderboard to
-							become{' '}
-							<Badged c="WHITELISTED"/>
-							. You can check your ranking with the <Code>/leaderboard</Code>
-							command.
-						</Text>
-					</Card>
-					<Card mb={1} className="WikiContent">
-						<Text h3>What is the objective of the game?</Text>
-						<Text small>
-							To mine ICHOR as fast possible. There are 4,000
-							ICHOR in total available to mine and both factions
-							started with 0.
-						</Text>
-					</Card>
-					<Card mb={1} className="WikiContent">
-						<Text h3>What is ICHOR?</Text>
-						<Text small>
-							Each ICHOR represents a single <Badged c="WHITELISTED"/> spot for that
-							faction.
-						</Text>
-					</Card>
-					<Card mb={1} className="WikiContent">
-						<Text h3>How does the game end?</Text>
-						<Text small>
-							When all 4,000 ICHOR points are mined.
-						</Text>
-					</Card>
-					<Card mb={1} className="WikiContent">
-						<Text h3>Can I choose my faction?</Text>
-						<Text small>
-							No. Faction roles are assigned randomly by <Badged c="Titanbornes-Reception-Bot"/>{' '}
-							in our Discord server and cannot be changed.
-						</Text>
-					</Card>
-					<Card mb={1} className="WikiContent">
-						<Text h3>What are the commands?</Text>
-						<Text small>
-							They are all listed in commands channel in our
-							Discord sever.
-						</Text>
-					</Card>
-					<Card className="WikiContent">
-						<Text h3>Do I have to remember all commands?</Text>
-						<Text small>
-							No, you can just type <Code>/</Code> and Discord shows you all
-							commands available in this server.
-						</Text>
-					</Card>
-				</div>
-			</div>
-			<Footer />
-			<style>
-				{`
+    return (
+        <>
+            <Meta title="Whitelist" />
+            <Header />
+            <div className="PageHeader">
+                <Text h2>Whitelist</Text>
+                <Text small>
+                    Here you will find how our whitelist works in Q&A format.
+                </Text>
+            </div>
+				<Spacer/>
+            <div className="PageWrapper">
+                <div className="PageContent">
+                    <Card mb={1} className="WikiContent">
+                        <Text h3>How does the whitelisting work?</Text>
+                        <Text small>
+                            There are a total of 4,000 whitelist spots but they
+                            are not divided by 2 for each <Badged c="FACTION" />
+                            ! Contributions from faction members decide how many
+                            spots each faction will have.
+                        </Text>
+                    </Card>
+                    <Card mb={1} className="WikiContent">
+                        <Text h3>How do I earn a whitelist position?</Text>
+                        <Text small>
+                            You can become Whitelisted by{' '}
+                            <Badged c="CONTRIBUTING" />. <br />
+                            <br />• Contribute to the lore. <br />• Share ideas
+                            on how our unique <Badged c="FUSION" /> system can
+                            be utilized. <br />• Spread the word on social
+                            media. <br />• Share your art that shows how our{' '}
+                            <Badged c="FUSION" /> system will look like. <br />•
+                            Invite friends to join your faction. <br />• Guide
+                            NFT beginners in the server.
+                        </Text>
+                    </Card>
+                    <Card mb={1} className="WikiContent">
+                        <Text h3>
+                            My faction has X whitelist spots, how do I make sure
+                            I have one of those spots?
+                        </Text>
+                        <Text small>
+                            You can check your ranking with the{' '}
+                            <Code>/leaderboard</Code>
+                            command. If your faction has X whitelist spots, your rank needs to be at least X for you to be eligible.
+                        </Text>
+                    </Card>
+                    
+                    <Card className="WikiContent">
+                        <Text h3>Can I choose my faction?</Text>
+                        <Text small>
+                            No. Faction roles are assigned randomly by{' '}
+                            <Badged c="Titanbornes-Reception-Bot" /> in our
+                            Discord server and cannot be changed.
+                        </Text>
+                    </Card>
+                    
+                </div>
+            </div>
+            <Footer />
+            <style>
+                {`
 					.card:hover {
 							filter: invert(1);
 								}
@@ -144,9 +105,9 @@ const Whitelist = () => {
 						color: skyblue!important;
 						font-size: 0.8rem!important;
 					}`}
-			</style>
-		</>
-	)
+            </style>
+        </>
+    )
 }
 
 export default Whitelist

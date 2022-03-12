@@ -39,11 +39,11 @@ const Index = () => {
                         </span>
                     </Text>
                     <Text small>
-                        Titanbornes is an experimental NFT Collection trying to
-                        do things a little differently. What if your NFT{' '}
-                        <Badged c="EVOLVED" /> in each transaction? What if a
-                        collection's supply <Badged c="DECREMENTED" /> after
-                        every transaction?
+                        Titanbornes is a <Badged c="FREE-TO-MINT" />{' '}
+                        experimental NFT Collection trying to do things a little
+                        differently. What if your NFT <Badged c="EVOLVED" /> in
+                        each of your transactions? What if a collection's supply{' '}
+                        <Badged c="DECREMENTED" /> after every transaction?
                     </Text>
                 </div>
             </div>
@@ -124,28 +124,6 @@ const Index = () => {
                         </Grid>
                         <Grid xs={24}>
                             <YouTube embedId="HUcJehWbhzc" />
-                        </Grid>
-                        <Grid xs={24}>
-                            <Card>
-                                <Text h3>HOW DO I EARN A WHITELIST SPOT?</Text>
-                                <Text small>
-                                    There are 4,000 whitelist spots in total
-                                    represented by each faction's ICHOR points.{' '}
-                                    <Badged c="REAPERS" /> and{' '}
-                                    <Badged c="TRICKSTERS" /> factions compete
-                                    for those whitelist spots. If 2 factions
-                                    perform similarly each will get 2,000 spots
-                                    but if one outpeforms the other, it can get
-                                    much more.
-                                    <br />
-                                    <br />
-                                    This 👇 video thoroughly explains how our
-                                    whitelisting system works.
-                                </Text>
-                            </Card>
-                        </Grid>
-                        <Grid xs={24}>
-                            <YouTube embedId="7rQ-SY_ZDFs" />
                         </Grid>
                     </Grid.Container>
                 </div>
