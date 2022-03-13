@@ -64,10 +64,6 @@ const Index = () => {
                                     of the collection and raises the rarity of
                                     all NFTs still in circulation. This is
                                     deflationary-supply taken to the extreme!
-                                    <br />
-                                    <br />
-                                    This 👇 video thoroughly explains the
-                                    process.
                                 </Text>
                             </Card>
                         </Grid>

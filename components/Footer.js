@@ -28,7 +28,7 @@ const Footer = () => {
 					</GeistLink>
 
 					<GeistLink
-						href="https://discord.gg/VVBww7qmhR"
+						href="https://discord.gg/uc2zH6SYmy"
 						target="_blank"
 						rel="noopener"
 						mx={0.5}
@@ -126,7 +126,7 @@ const Footer = () => {
 									<GeistLink
 										target="_blank"
 										rel="noopener"
-										href="https://discord.gg/VVBww7qmhR"
+										href="https://discord.gg/uc2zH6SYmy"
 									>
 										Discord
 									</GeistLink>

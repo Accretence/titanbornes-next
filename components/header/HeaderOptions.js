@@ -192,7 +192,7 @@ const HeaderOptions = () => {
     return (
         <>
             <GeistLink
-                href={'https://discord.gg/VVBww7qmhR'}
+                href={'https://discord.gg/uc2zH6SYmy'}
                 target="_blank"
                 rel="noopener"
             >

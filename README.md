@@ -1,15 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# titanbornes-next
 
-![Titanbornes_Cover@0,5x](https://user-images.githubusercontent.com/45223699/151791982-78605257-20fb-49af-9d3e-08d324f98b25.png)
+![Titanbornes_TwitterCover@0,5x](https://user-images.githubusercontent.com/45223699/156891223-35d9ee5f-fd5c-40c1-8e45-9d4ecf9b4b77.png)
 
-## Titanbornes Next Front-end
+## Titanbornes
 
 - Website: [titanbornes.com](https://titanbornes.com/)
-- Docs: [titanbornes.com/docs/](https://titanbornes.com/docs/)
 - Twitter: [@titanbornes](https://twitter.com/titanbornes)
-- Reddit: [/r/titanbornes](https://www.reddit.com/r/titanbornes/)
-- Email: [contact@titanbornes.com](mailto:contact@titanbornes.com)
-- Discord: [Titanbornes](https://discord.gg/Titanbornes)
+- Discord: [discord.gg/VVBww7qmhR](https://discord.gg/uc2zH6SYmy)
 
 ## Getting Started
 
