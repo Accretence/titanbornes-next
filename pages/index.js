@@ -50,59 +50,8 @@ const Index = () => {
             <div className="PageWrapper">
                 <div className="PageContent">
                     <Grid.Container mb={0} gap={1}>
-                        <Grid xs={24} sm={12}>
-                            <Grid.Container gap={1}>
-                                <Grid xs={24}>
-                                    <Image
-                                        src="https://user-images.githubusercontent.com/45223699/156929802-c6d69687-975e-4e82-b7ba-b716d22126bb.jpg"
-                                        height="100%"
-                                        width="100%"
-                                        style={{
-                                            objectFit: 'cover',
-                                        }}
-                                        my={0}
-                                        py={0}
-                                        draggable={false}
-                                    />
-                                </Grid>
-                                <Grid xs={24}>
-                                    <Card px={0.1} pt={0.1} width="100%">
-                                        <Text h6 my={0}>
-                                            Tricksters Titanborne
-                                        </Text>
-                                        <Text type="secondary" small>
-                                            Fusion Count: 4
-                                        </Text>
-                                    </Card>
-                                </Grid>
-                            </Grid.Container>
-                        </Grid>
-                        <Grid xs={24} sm={12}>
-                            <Grid.Container gap={1}>
-                                <Grid xs={24}>
-                                    <Image
-                                        src="https://user-images.githubusercontent.com/45223699/156929160-cad93e7c-e31b-44b3-a79e-6d746825add8.jpg"
-                                        height="100%"
-                                        width="100%"
-                                        style={{
-                                            objectFit: 'cover',
-                                        }}
-                                        my={0}
-                                        py={0}
-                                        draggable={false}
-                                    />
-                                </Grid>
-                                <Grid xs={24}>
-                                    <Card px={0.1} pt={0.1} width="100%">
-                                        <Text h6 my={0}>
-                                            Reapers Titanborne
-                                        </Text>
-                                        <Text type="secondary" small>
-                                            Fusion Count: 2
-                                        </Text>
-                                    </Card>
-                                </Grid>
-                            </Grid.Container>
+                        <Grid xs={24}>
+                            <YouTube embedId="HUcJehWbhzc" />
                         </Grid>
                         <Grid xs={24}>
                             <Card>
@@ -121,9 +70,6 @@ const Index = () => {
                                     process.
                                 </Text>
                             </Card>
-                        </Grid>
-                        <Grid xs={24}>
-                            <YouTube embedId="HUcJehWbhzc" />
                         </Grid>
                     </Grid.Container>
                 </div>
