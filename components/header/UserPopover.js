@@ -20,7 +20,11 @@ const UserPopover = () => {
         setProvider(null)
         localStorage.removeItem('currentUserInfo')
 
-        setToast({ text: 'Wallet disconnected...', type: 'warning' })
+        setToast({
+            text: 'Wallet disconnected...',
+            type: 'warning',
+            delay: 5000,
+        })
     }
 
     return (
@@ -30,10 +34,7 @@ const UserPopover = () => {
                     <Popover.Item title mb="0.9">
                         <Description
                             title={'Wallet Address'}
-                            content={`${provider.address.slice(
-                                0,
-                                21
-                            )}...`}
+                            content={`${provider.address.slice(0, 21)}...`}
                         />
                     </Popover.Item>
                     <Popover.Item>

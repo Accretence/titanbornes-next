@@ -27,6 +27,8 @@ import { ProviderContext } from '../state/context/providerContext'
 // Hooks
 import { getContract } from '../hooks/getContract'
 
+const config = require('../config.json')
+
 const Mint = () => {
     let contract
     const theme = useTheme()
@@ -47,48 +49,98 @@ const Mint = () => {
     // Global Context
     const { provider, setProvider } = useContext(ProviderContext)
 
-    async function waitMint(faction) {
+    async function presaleMint(faction) {
         try {
-            console.log(faction.current)
-            const wallets = require(`../data/${faction.current}Wallets.json`)
+            const factionWallets = require(`../data/${faction.current}Wallets.json`)
 
-            const leafNodes = wallets.map((wallet) => keccak256(wallet))
+            const factionLeafNodes = factionWallets.map((wallet) =>
+                keccak256(wallet)
+            )
 
-            const merkleTree = new MerkleTree(leafNodes, keccak256, {
+            const factionMerkleTree = new MerkleTree(
+                factionLeafNodes,
+                keccak256,
+                {
+                    sortPairs: true,
+                }
+            )
+
+            const factionRootHash = factionMerkleTree.getHexRoot()
+
+            const topWallets = require(`../data/topWallets.json`)
+
+            const topLeafNodes = topWallets.map((wallet) => keccak256(wallet))
+
+            const topMerkleTree = new MerkleTree(topLeafNodes, keccak256, {
                 sortPairs: true,
             })
 
-            const rootHash = merkleTree.getHexRoot()
+            const topRootHash = topMerkleTree.getHexRoot()
 
             contract = await getContract(
                 provider.provider.getSigner(),
-                process.env.NEXT_PUBLIC_CONTRACT
+                config.contract.address
             )
 
-            const response = await contract.safeMint(
-                merkleTree.getHexProof(keccak256(provider.address))
+            const response = await contract.presaleMint(
+                factionMerkleTree.getHexProof(keccak256(provider.address)),
+                topMerkleTree.getHexProof(keccak256(provider.address))
             )
 
             if (response.hash) {
                 setToast({
-                    text: 'Congrats! 🎉 You successfully minted your Titanborne NFT!',
+                    text: 'Congrats! 🎉 You successfully submitted your transaction to mint your Titanborne NFT!',
                     type: 'warning',
+                    delay: 5000,
                 })
             } else {
                 setToast({
                     text: response.message,
                     type: 'warning',
+                    delay: 5000,
                 })
             }
         } catch (error) {
             setToast({
                 text: error.message,
                 type: 'warning',
+                delay: 5000,
             })
         }
     }
 
-    async function isWhitelisted(faction) {
+    async function publicMint() {
+        try {
+            contract = await getContract(
+                provider.provider.getSigner(),
+                config.contract.address
+            )
+
+            const response = await contract.publicMint()
+
+            if (response.hash) {
+                setToast({
+                    text: 'Congrats! 🎉 You successfully submitted your transaction to mint your Titanborne NFT!',
+                    type: 'warning',
+                    delay: 5000,
+                })
+            } else {
+                setToast({
+                    text: response.message,
+                    type: 'warning',
+                    delay: 5000,
+                })
+            }
+        } catch (error) {
+            setToast({
+                text: error.message,
+                type: 'error',
+                delay: 5000,
+            })
+        }
+    }
+
+    async function verifyMerkle(faction) {
         try {
             const wallets = require(`../data/${faction}Wallets.json`)
 
@@ -102,10 +154,10 @@ const Mint = () => {
 
             contract = await getContract(
                 provider.provider.getSigner(),
-                process.env.NEXT_PUBLIC_CONTRACT
+                config.contract.address
             )
 
-            const response = await contract.isWhitelisted(
+            const response = await contract.verifyMerkle(
                 merkleTree.getHexProof(keccak256(provider.address)),
                 rootHash,
                 provider.address
@@ -117,18 +169,20 @@ const Mint = () => {
                 setToast({
                     text: 'Congrats! 🎉 You are whitelisted to take part in our presale.',
                     type: 'warning',
+                    delay: 5000,
                 })
             } else {
                 setToast({
                     text: 'Sorry! 😔💔 You are not whitelisted to take part in our presale.',
                     type: 'warning',
+                    delay: 5000,
                 })
             }
         } catch (error) {
-            console.log(error)
             setToast({
                 text: error.message,
-                type: 'warning',
+                type: 'error',
+                delay: 5000,
             })
         }
     }
@@ -221,11 +275,9 @@ const Mint = () => {
                                 </Grid.Container>
                             </Grid>
                             <Grid xs={24}>
-                                {process.env.NEXT_PUBLIC_MINTSTATE ==
-                                'WAITING' ? (
+                                {config.contract.mintState == 'WAITING' ? (
                                     <Card>Minting is disabled.</Card>
-                                ) : process.env.NEXT_PUBLIC_MINTSTATE ==
-                                  'PRESALE' ? (
+                                ) : config.contract.mintState == 'PRESALE' ? (
                                     <Grid.Container mb={0} gap={1}>
                                         {whitelistCheckedRef &&
                                         whitelistedFaction ? (
@@ -260,14 +312,15 @@ const Mint = () => {
                                                 <Grid xs={24}>
                                                     <Button
                                                         onClick={() => {
-                                                            waitMint(
+                                                            presaleMint(
                                                                 whitelistedFactionRef
                                                             )
                                                         }}
                                                         width="100%"
-                                                        type="warning"
+                                                        className="Accent"
+                                                        type="secondary"
                                                     >
-                                                        Mint
+                                                        Presale Mint
                                                     </Button>
                                                 </Grid>
                                             </>
@@ -300,39 +353,69 @@ const Mint = () => {
                                                         </Text>
                                                     </Card>
                                                 </Grid>
-                                                <Grid xs={12}>
-                                                    <Button
-                                                        onClick={() => {
-                                                            isWhitelisted(
-                                                                'reapers'
-                                                            )
-                                                        }}
-                                                        className="Accent"
-                                                        width="100%"
-                                                        type="secondary"
-                                                    >
-                                                        Reapers
-                                                    </Button>
-                                                </Grid>
-                                                <Grid xs={12}>
-                                                    <Button
-                                                        onClick={() => {
-                                                            isWhitelisted(
-                                                                'tricksters'
-                                                            )
-                                                        }}
-                                                        className="Accent"
-                                                        width="100%"
-                                                        type="secondary"
-                                                    >
-                                                        Tricksters
-                                                    </Button>
-                                                </Grid>
+                                                {provider ? (
+                                                    <>
+                                                        <Grid xs={24} sm={12}>
+                                                            <Button
+                                                                onClick={() => {
+                                                                    verifyMerkle(
+                                                                        'reapers'
+                                                                    )
+                                                                }}
+                                                                className="Accent"
+                                                                width="100%"
+                                                                type="secondary"
+                                                            >
+                                                                Reapers
+                                                            </Button>
+                                                        </Grid>
+                                                        <Grid xs={24} sm={12}>
+                                                            <Button
+                                                                onClick={() => {
+                                                                    verifyMerkle(
+                                                                        'tricksters'
+                                                                    )
+                                                                }}
+                                                                className="Accent"
+                                                                width="100%"
+                                                                type="secondary"
+                                                            >
+                                                                Tricksters
+                                                            </Button>
+                                                        </Grid>
+                                                    </>
+                                                ) : (
+                                                    <Grid xs={24}>
+                                                        <Button
+                                                            width="100%"
+                                                            type="secondary"
+                                                            disabled={true}
+                                                        >
+                                                            You need to login
+                                                            with Metamask to
+                                                            access mint
+                                                            functionality
+                                                        </Button>
+                                                    </Grid>
+                                                )}
                                             </>
                                         )}
                                     </Grid.Container>
                                 ) : (
-                                    <Card>Public sale.</Card>
+                                    <Grid.Container>
+                                        <Grid xs={24}>
+                                            <Button
+                                                onClick={() => {
+                                                    publicMint()
+                                                }}
+                                                width="100%"
+                                                className="Accent"
+                                                type="secondary"
+                                            >
+                                                Public Mint
+                                            </Button>
+                                        </Grid>
+                                    </Grid.Container>
                                 )}
                             </Grid>
                         </Grid.Container>

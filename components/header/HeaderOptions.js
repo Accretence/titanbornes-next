@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 
+const config = require('../../config.json')
+
 // Libraries
 import { ethers } from 'ethers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -65,6 +67,7 @@ const HeaderOptions = () => {
             setToast({
                 text: 'You need to install MetaMask to be able to interact with this application.',
                 type: 'warning',
+                delay: 5000,
             })
         }
     }
@@ -74,7 +77,7 @@ const HeaderOptions = () => {
             localStorage.removeItem('currentUserInfo')
             setProvider(null)
             window.location.reload()
-        } else if (window.ethereum.chainId == process.env.NEXT_PUBLIC_CHAINID) {
+        } else if (window.ethereum.chainId == config.contract.chainId) {
             window.localStorage.setItem(
                 'currentUserInfo',
                 JSON.stringify(newWalletAddress)
@@ -84,13 +87,14 @@ const HeaderOptions = () => {
                 provider: new ethers.providers.Web3Provider(window.ethereum),
                 address: newWalletAddress,
                 correctChain:
-                    window.ethereum.chainId == process.env.NEXT_PUBLIC_CHAINID
+                    window.ethereum.chainId == config.contract.chainId
                         ? true
                         : false,
             })
             setToast({
                 text: 'Wallet connected...',
                 type: 'warning',
+                delay: 5000,
             })
         }
     }
@@ -141,52 +145,56 @@ const HeaderOptions = () => {
     }
 
     const PleaseConnect = () => {
-        return <Button
-            onClick={connectWalletHandler}
-            style={
-                sticky
-                    ? {
-                          backgroundColor: '#ffd400',
-                          color: 'black',
-                          top: '0px',
-                          borderColor: `${theme.palette.accents_2}`,
-                      }
-                    : {
-                          backgroundColor: '#ffd400',
-                          color: 'black',
-                      }
-            }
-            auto
-            scale={0.6}
-        >
-            <Text small>
-                <b>Connect Metamask Wallet</b>
-            </Text>
-        </Button>
+        return (
+            <Button
+                onClick={connectWalletHandler}
+                style={
+                    sticky
+                        ? {
+                              backgroundColor: '#ffd400',
+                              color: 'black',
+                              top: '0px',
+                              borderColor: `${theme.palette.accents_2}`,
+                          }
+                        : {
+                              backgroundColor: '#ffd400',
+                              color: 'black',
+                          }
+                }
+                auto
+                scale={0.6}
+            >
+                <Text small>
+                    <b>Connect Metamask Wallet</b>
+                </Text>
+            </Button>
+        )
     }
 
     const WrongNetwork = () => {
-        return <Button
-            style={
-                sticky
-                    ? {
-                          backgroundColor: '#ffd400',
-                          color: 'black',
-                          top: '0px',
-                          borderColor: `${theme.palette.accents_2}`,
-                      }
-                    : {
-                          backgroundColor: '#ffd400',
-                          color: 'black',
-                      }
-            }
-            auto
-            scale={0.6}
-        >
-            <Text small>
-                <b>Wrong Network</b>
-            </Text>
-        </Button>
+        return (
+            <Button
+                style={
+                    sticky
+                        ? {
+                              backgroundColor: '#ffd400',
+                              color: 'black',
+                              top: '0px',
+                              borderColor: `${theme.palette.accents_2}`,
+                          }
+                        : {
+                              backgroundColor: '#ffd400',
+                              color: 'black',
+                          }
+                }
+                auto
+                scale={0.6}
+            >
+                <Text small>
+                    <b>Wrong Network</b>
+                </Text>
+            </Button>
+        )
     }
 
     return (
@@ -253,8 +261,7 @@ const HeaderOptions = () => {
             {metamaskAvailable && (
                 <div style={{ display: 'inline' }}>
                     {provider ? (
-                        window.ethereum.chainId ==
-                        process.env.NEXT_PUBLIC_CHAINID ? (
+                        window.ethereum.chainId == config.contract.chainId ? (
                             <Connected />
                         ) : (
                             <WrongNetwork />

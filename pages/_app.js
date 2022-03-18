@@ -11,6 +11,8 @@ import { ProviderContext } from '../state/context/providerContext'
 // Utilities
 import '../utils/icons'
 
+const config = require('../config.json')
+
 export default function App({ Component, pageProps }) {
     // Local State
     const [themeType, setThemeType] = useState('dark')
@@ -40,14 +42,13 @@ export default function App({ Component, pageProps }) {
                 ) {
                     console.log('Reading from localStorage')
                     setProvider({
-								connected: true,
+                        connected: true,
                         provider: new ethers.providers.Web3Provider(
                             window.ethereum
                         ),
                         address: localStoragedWalletAddress,
                         correctChain:
-                            window.ethereum.chainId ==
-                            process.env.NEXT_PUBLIC_CHAINID
+                            window.ethereum.chainId == config.contract.chainId
                                 ? true
                                 : false,
                     })
