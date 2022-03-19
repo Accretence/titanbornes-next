@@ -39,7 +39,7 @@ const Header = () => {
           }
           .MenuNavigationTitle a {
             color: ${theme.palette.foreground}!important;
-            font-size: 1.8rem;
+            font-size: 1.65rem;
             font-weight: 600;
             letter-spacing: 0.3rem;
           }

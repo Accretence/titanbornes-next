@@ -11,6 +11,9 @@ import {
 } from '@geist-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+const config = require('../config.json')
+
+
 const Footer = () => {
 	const theme = useTheme()
 
@@ -28,7 +31,7 @@ const Footer = () => {
 					</GeistLink>
 
 					<GeistLink
-						href="https://discord.gg/uc2zH6SYmy"
+						href={config.socials.discord}
 						target="_blank"
 						rel="noopener"
 						mx={0.5}
@@ -126,7 +129,7 @@ const Footer = () => {
 									<GeistLink
 										target="_blank"
 										rel="noopener"
-										href="https://discord.gg/uc2zH6SYmy"
+										href={config.socials.discord}
 									>
 										Discord
 									</GeistLink>

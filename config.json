@@ -3,5 +3,8 @@
         "address": "0xeFa5D4e8F049A7d0eF7D5e738C673FFB8C23dc3D",
         "chainId": "0x4",
         "mintState": "PUBLIC"
+    },
+    "socials": {
+        "discord": "https://discord.gg/titanbornes"
     }
 }

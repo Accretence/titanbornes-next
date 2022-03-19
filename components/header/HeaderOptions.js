@@ -20,6 +20,7 @@ import UserPopover from './UserPopover'
 // Hooks
 
 // Utilities
+const config = require('../../config.json')
 
 // Context API
 import { themePreference } from '../../state/context/themeContext'
@@ -200,7 +201,7 @@ const HeaderOptions = () => {
     return (
         <>
             <GeistLink
-                href={'https://discord.gg/uc2zH6SYmy'}
+                href={config.socials.discord}
                 target="_blank"
                 rel="noopener"
             >
