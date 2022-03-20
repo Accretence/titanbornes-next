@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
 
-const config = require('../../config.json')
-
 // Libraries
 import { ethers } from 'ethers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
