@@ -50,7 +50,7 @@ const FAQ = () => {
                     </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>What is the total supply?</Text>
-                        <Text small>4,000.</Text>
+                        <Text small>1,000.</Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>What is the minting price?</Text>
@@ -74,9 +74,7 @@ const FAQ = () => {
                         </Text>
                         <Text small>
                             All 4,000 tokens will be available to mint by{' '}
-                            <Badged c="WHITELISTED" /> members in a 24h window,
-                            after which any unminted supply will be available to
-                            mint publicly.
+                            <Badged c="WHITELISTED" /> members in a 24h window. There is no public mint allocation.
                         </Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
@@ -98,13 +96,6 @@ const FAQ = () => {
                             Yes, but only if you're <Badged c="WHITELISTED" />{' '}
                             and mint in the 24h presale window.
                         </Text>
-                    </Card>
-                    <Card className="WikiContent">
-                        <Text h3>
-                            Will friends that I invite to Discord server join my
-                            faction?
-                        </Text>
-                        <Text small>Yes.</Text>
                     </Card>
                 </div>
             </div>

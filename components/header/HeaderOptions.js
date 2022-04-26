@@ -198,7 +198,7 @@ const HeaderOptions = () => {
 
     return (
         <>
-            <GeistLink
+            {/* <GeistLink
                 href={config.socials.discord}
                 target="_blank"
                 rel="noopener"
@@ -212,7 +212,7 @@ const HeaderOptions = () => {
                     px={0.3}
                     scale={0.7}
                 />
-            </GeistLink>
+            </GeistLink> */}
             <GeistLink
                 href={'https://twitter.com/titanbornes'}
                 target="_blank"

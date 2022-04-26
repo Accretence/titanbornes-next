@@ -44,7 +44,7 @@ const Submenu = () => {
 							<Tabs.Item
 								label={
 									<>
-										MARKETPLACE
+										GALLERY
 										<Badge
                       ml={0.5}
                       scale={0.5}
@@ -57,7 +57,7 @@ const Submenu = () => {
 										</Badge>
 									</>
 								}
-								value="/marketplace"
+								value="/gallery"
 							/>
 						</Tabs>
 					</div>

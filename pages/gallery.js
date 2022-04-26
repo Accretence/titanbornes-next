@@ -15,16 +15,16 @@ import {
 	Description,
 } from '@geist-ui/core'
 
-const Marketplace = () => {
+const Gallery = () => {
 	const theme = useTheme()
 
 	return (
 		<>
-			<Meta title="Marketplace" />
+			<Meta title="Gallery" />
 			<Header />
 			<div className="PageHeader">
 				<div style={{ marginTop: '2rem', marginBottom: '3rem' }}>
-					<Text h2>Marketplace </Text>
+					<Text h2>Gallery </Text>
 				</div>
 			</div>
 			<Spacer />
@@ -32,7 +32,7 @@ const Marketplace = () => {
 				<div className="PageContent">
 					<Card className="WikiContent">
 						<Text small>
-							This marketplace will act as an independent supplement to other available options so you'll have all possible tools at your disposal. In later chapters, we'll have utilities only possible to implement using our own marketplace to take advantage of our custom-built smart contracts and native token.
+							Your dedicated gallery to view every Titanbornes NFT in circulation. You will also be able to see their journey through their previous fusions.
 						</Text>
 					</Card>
 				</div>
@@ -67,4 +67,4 @@ const Marketplace = () => {
 	)
 }
 
-export default Marketplace
+export default Gallery

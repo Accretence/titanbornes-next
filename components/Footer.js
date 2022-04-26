@@ -29,15 +29,14 @@ const Footer = () => {
 					>
 						<FontAwesomeIcon icon={['fab', 'twitter']} />
 					</GeistLink>
-
-					<GeistLink
+					{/* <GeistLink
 						href={config.socials.discord}
 						target="_blank"
 						rel="noopener"
 						mx={0.5}
 					>
 						<FontAwesomeIcon icon={['fab', 'discord']} />
-					</GeistLink>
+					</GeistLink> */}
 				</Text>
 				<Divider />
 				<Spacer />
@@ -125,7 +124,7 @@ const Footer = () => {
 						</Grid>
 						<Grid className="FooterGrid" xs={8}>
 							<ul>
-								<li>
+								{/* <li>
 									<GeistLink
 										target="_blank"
 										rel="noopener"
@@ -133,7 +132,7 @@ const Footer = () => {
 									>
 										Discord
 									</GeistLink>
-								</li>
+								</li> */}
 								<li>
 									<GeistLink
 										target="_blank"
