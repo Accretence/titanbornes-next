@@ -8,9 +8,6 @@ import { ethers } from 'ethers'
 import { ThemeContext, themes } from '../state/context/themeContext'
 import { ProviderContext } from '../state/context/providerContext'
 
-// Utilities
-import '../utils/icons'
-
 const config = require('../config.json')
 
 export default function App({ Component, pageProps }) {

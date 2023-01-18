@@ -39,11 +39,10 @@ const Roadmap = () => {
                     <Card mb={1} className="WikiContent">
                         <Text h3>Chapter 01: Genesis</Text>
                         <Text small>
-                            • Fair-launch of Titanborne NFTs, top players in our
-                            Discord game mint our NFTs for <Badged c="FREE" />.
-                            A TRUE COMMUNITY will shape itself around a tangibly
-                            refreshing idea that fairly distributes value to
-                            those who genuinely want to be a part of it.
+                            • Fair-launch of Titanborne NFTs. A TRUE COMMUNITY
+                            will shape itself around a tangibly refreshing idea
+                            that fairly distributes value to those who genuinely
+                            want to be a part of it.
                         </Text>
                         <br />
                         <Text small>

@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react'
 
 // Libraries
 import { ethers } from 'ethers'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     useToasts,
     Text,
@@ -23,6 +22,7 @@ const config = require('../../config.json')
 // Context API
 import { themePreference } from '../../state/context/themeContext'
 import { ProviderContext } from '../../state/context/providerContext'
+import { Moon, Sun, Twitter } from '@geist-ui/icons'
 
 const HeaderOptions = () => {
     // Hooks
@@ -198,21 +198,6 @@ const HeaderOptions = () => {
 
     return (
         <>
-            {/* <GeistLink
-                href={config.socials.discord}
-                target="_blank"
-                rel="noopener"
-            >
-                <Button
-                    style={sticky ? { top: '1.5px' } : {}}
-                    icon={<FontAwesomeIcon icon={['fab', 'discord']} />}
-                    auto
-                    type="abort"
-                    mx={0.3}
-                    px={0.3}
-                    scale={0.7}
-                />
-            </GeistLink> */}
             <GeistLink
                 href={'https://twitter.com/titanbornes'}
                 target="_blank"
@@ -220,7 +205,7 @@ const HeaderOptions = () => {
             >
                 <Button
                     style={sticky ? { top: '1.5px' } : {}}
-                    icon={<FontAwesomeIcon icon={['fab', 'twitter']} />}
+                    icon={<Twitter />}
                     auto
                     type="abort"
                     mx={0.3}
@@ -243,13 +228,7 @@ const HeaderOptions = () => {
                 px={0.6}
                 scale={0.6}
                 auto
-                icon={
-                    theme.type === 'dark' ? (
-                        <FontAwesomeIcon icon={['fas', 'sun']} />
-                    ) : (
-                        <FontAwesomeIcon icon={['fas', 'moon']} />
-                    )
-                }
+                icon={theme.type === 'dark' ? <Sun /> : <Moon />}
                 onClick={() =>
                     prefers.switchTheme(
                         theme.type === 'dark' ? 'light' : 'dark'

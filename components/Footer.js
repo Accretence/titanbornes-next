@@ -2,129 +2,120 @@ import React from 'react'
 import Link from 'next/link'
 
 import {
-	Text,
-	Grid,
-	Link as GeistLink,
-	useTheme,
-	Spacer,
-	Divider,
+    Text,
+    Grid,
+    Link as GeistLink,
+    useTheme,
+    Spacer,
+    Divider,
 } from '@geist-ui/core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Twitter } from '@geist-ui/icons'
 
 const config = require('../config.json')
 
-
 const Footer = () => {
-	const theme = useTheme()
+    const theme = useTheme()
 
-	return (
-		<>
-			<footer>
-				<Text>
-					<GeistLink
-						href="https://twitter.com/titanbornes"
-						target="_blank"
-						rel="noopener"
-						mx={0.5}
-					>
-						<FontAwesomeIcon icon={['fab', 'twitter']} />
-					</GeistLink>
-					{/* <GeistLink
-						href={config.socials.discord}
-						target="_blank"
-						rel="noopener"
-						mx={0.5}
-					>
-						<FontAwesomeIcon icon={['fab', 'discord']} />
-					</GeistLink> */}
-				</Text>
-				<Divider />
-				<Spacer />
-				<div className="FooterWrapper">
-					<Grid.Container gap={0}>
-						<Grid className="FooterGrid" xs={8}>
-							<ul>
-								<li>
-									<GeistLink
-										// target="_blank"
-										// rel="noopener"
-										href="/"
-									>
-										LooksRare [Soon]
-									</GeistLink>
-								</li>
-								<li>
-									<GeistLink
-										// target="_blank"
-										// rel="noopener"
-										href="/"
-									>
-										X2Y2 [Soon]
-									</GeistLink>
-								</li>
-								<li>
-									<GeistLink
-										// target="_blank"
-										// rel="noopener"
-										href="/"
-									>
-										Rarible [Soon]
-									</GeistLink>
-								</li>
-								<li>
-									<GeistLink
-										// target="_blank"
-										// rel="noopener"
-										href="/"
-									>
-										OpenSea [Soon]
-									</GeistLink>
-								</li>
-							</ul>
-						</Grid>
-						<Grid className="FooterGrid" xs={8}>
-							<ul>
-								<li>
-									<GeistLink
-										// target="_blank"
-										// rel="noopener"
-										href="/"
-									>
-										Contract [Soon]
-									</GeistLink>
-								</li>
-								<li>
-									<GeistLink
-										// target="_blank"
-										// rel="noopener"
-										href="/"
-									>
-										Contract Audit [Soon]
-									</GeistLink>
-								</li>
-								<li>
-									<GeistLink
-										// target="_blank"
-										// rel="noopener"
-										href="/"
-									>
-										Subgraph [Soon]
-									</GeistLink>
-								</li>
-								<li>
-									<GeistLink
-										target="_blank"
-										rel="noopener"
-										href="https://github.com/titanbornes"
-									>
-										Github Organization
-									</GeistLink>
-								</li>
-							</ul>
-						</Grid>
-						<Grid className="FooterGrid" xs={8}>
-							<ul>
-								{/* <li>
+    return (
+        <>
+            <footer>
+                <Text>
+                    <GeistLink
+                        href="https://twitter.com/titanbornes"
+                        target="_blank"
+                        rel="noopener"
+                        mx={0.5}
+                    >
+                        <Twitter />
+                    </GeistLink>
+                </Text>
+                <Divider />
+                <Spacer />
+                <div className="FooterWrapper">
+                    <Grid.Container gap={0}>
+                        <Grid className="FooterGrid" xs={8}>
+                            <ul>
+                                <li>
+                                    <GeistLink
+                                        // target="_blank"
+                                        // rel="noopener"
+                                        href="/"
+                                    >
+                                        LooksRare [Soon]
+                                    </GeistLink>
+                                </li>
+                                <li>
+                                    <GeistLink
+                                        // target="_blank"
+                                        // rel="noopener"
+                                        href="/"
+                                    >
+                                        X2Y2 [Soon]
+                                    </GeistLink>
+                                </li>
+                                <li>
+                                    <GeistLink
+                                        // target="_blank"
+                                        // rel="noopener"
+                                        href="/"
+                                    >
+                                        Rarible [Soon]
+                                    </GeistLink>
+                                </li>
+                                <li>
+                                    <GeistLink
+                                        // target="_blank"
+                                        // rel="noopener"
+                                        href="/"
+                                    >
+                                        OpenSea [Soon]
+                                    </GeistLink>
+                                </li>
+                            </ul>
+                        </Grid>
+                        <Grid className="FooterGrid" xs={8}>
+                            <ul>
+                                <li>
+                                    <GeistLink
+                                        // target="_blank"
+                                        // rel="noopener"
+                                        href="/"
+                                    >
+                                        Contract [Soon]
+                                    </GeistLink>
+                                </li>
+                                <li>
+                                    <GeistLink
+                                        // target="_blank"
+                                        // rel="noopener"
+                                        href="/"
+                                    >
+                                        Contract Audit [Soon]
+                                    </GeistLink>
+                                </li>
+                                <li>
+                                    <GeistLink
+                                        // target="_blank"
+                                        // rel="noopener"
+                                        href="/"
+                                    >
+                                        Subgraph [Soon]
+                                    </GeistLink>
+                                </li>
+                                <li>
+                                    <GeistLink
+                                        target="_blank"
+                                        rel="noopener"
+                                        href="https://github.com/titanbornes"
+                                    >
+                                        Github Organization
+                                    </GeistLink>
+                                </li>
+                            </ul>
+                        </Grid>
+                        <Grid className="FooterGrid" xs={8}>
+                            <ul>
+                                {/* <li>
 									<GeistLink
 										target="_blank"
 										rel="noopener"
@@ -133,47 +124,47 @@ const Footer = () => {
 										Discord
 									</GeistLink>
 								</li> */}
-								<li>
-									<GeistLink
-										target="_blank"
-										rel="noopener"
-										href="https://www.twitter.com/titanbornes"
-									>
-										Twitter
-									</GeistLink>
-								</li>
-								<li>
-									<GeistLink
-										target="_blank"
-										rel="noopener"
-										href="https://www.youtube.com/channel/UChzAwl-JJa2rPXToBaxdkxw"
-									>
-										YouTube
-									</GeistLink>
-								</li>
-								<li>
-									<GeistLink
-										target="_blank"
-										rel="noopener"
-										href="https://instagram.com/titanbornes"
-									>
-										Instagram
-									</GeistLink>
-								</li>
-							</ul>
-						</Grid>
-					</Grid.Container>
-				</div>
-				<Spacer />
-				<Divider />
-				<Text
-					className="FooterSignature"
-					style={{ fontSize: '0.65rem' }}
-				>
-					&copy; Titanbornes 2022
-				</Text>
-			</footer>
-			<style>{`
+                                <li>
+                                    <GeistLink
+                                        target="_blank"
+                                        rel="noopener"
+                                        href="https://www.twitter.com/titanbornes"
+                                    >
+                                        Twitter
+                                    </GeistLink>
+                                </li>
+                                <li>
+                                    <GeistLink
+                                        target="_blank"
+                                        rel="noopener"
+                                        href="https://www.youtube.com/channel/UChzAwl-JJa2rPXToBaxdkxw"
+                                    >
+                                        YouTube
+                                    </GeistLink>
+                                </li>
+                                <li>
+                                    <GeistLink
+                                        target="_blank"
+                                        rel="noopener"
+                                        href="https://instagram.com/titanbornes"
+                                    >
+                                        Instagram
+                                    </GeistLink>
+                                </li>
+                            </ul>
+                        </Grid>
+                    </Grid.Container>
+                </div>
+                <Spacer />
+                <Divider />
+                <Text
+                    className="FooterSignature"
+                    style={{ fontSize: '0.65rem' }}
+                >
+                    &copy; Titanbornes 2022
+                </Text>
+            </footer>
+            <style>{`
 				footer p {
 					color: ${theme.palette.accents_6}!important;
 				}
@@ -214,8 +205,8 @@ const Footer = () => {
 					margin: 0;
 				}
       `}</style>
-		</>
-	)
+        </>
+    )
 }
 
 export default Footer

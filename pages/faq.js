@@ -24,16 +24,16 @@ const FAQ = () => {
                     Titanbornes.
                 </Text>
             </div>
-            <Spacer/>
+            <Spacer />
             <div className="PageWrapper">
                 <div className="PageContent">
                     <Card mb={1} className="WikiContent">
                         <Text h3>What is Titanbornes?</Text>
                         <Text small>
-                            <Badged c="FREE-TO-MINT" /> Experimental NFT
-                            Collection trying to do things a little differently.
-                            What if your NFT <Badged c="EVOVLED" /> in each of
-                            your transactions? What if a collection's supply{' '}
+                            Experimental NFT Collection trying to do things a
+                            little differently. What if your NFT{' '}
+                            <Badged c="EVOVLED" /> in each of your transactions?
+                            What if a collection's supply{' '}
                             <Badged c="DECREMENTED" /> after every transaction?
                         </Text>
                     </Card>
@@ -54,7 +54,7 @@ const FAQ = () => {
                     </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>What is the minting price?</Text>
-                        <Text small>This collection will be <Badged c="FREE-TO-MINT!" /></Text>
+                        <Text small>TBA.</Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>How many can I mint?</Text>
@@ -74,7 +74,8 @@ const FAQ = () => {
                         </Text>
                         <Text small>
                             All 4,000 tokens will be available to mint by{' '}
-                            <Badged c="WHITELISTED" /> members in a 24h window. There is no public mint allocation.
+                            <Badged c="WHITELISTED" /> members in a 24h window.
+                            There is no public mint allocation.
                         </Text>
                     </Card>
                     <Card mb={1} className="WikiContent">

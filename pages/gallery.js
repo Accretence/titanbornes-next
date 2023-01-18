@@ -7,39 +7,41 @@ import Footer from '../components/Footer'
 
 // Additional Libraries
 import {
-	useTheme,
-	Text,
-	Image,
-	Spacer,
-	Card,
-	Description,
+    useTheme,
+    Text,
+    Image,
+    Spacer,
+    Card,
+    Description,
 } from '@geist-ui/core'
 
 const Gallery = () => {
-	const theme = useTheme()
+    const theme = useTheme()
 
-	return (
-		<>
-			<Meta title="Gallery" />
-			<Header />
-			<div className="PageHeader">
-				<div style={{ marginTop: '2rem', marginBottom: '3rem' }}>
-					<Text h2>Gallery </Text>
-				</div>
-			</div>
-			<Spacer />
-			<div className="PageWrapper">
-				<div className="PageContent">
-					<Card className="WikiContent">
-						<Text small>
-							Your dedicated gallery to view every Titanbornes NFT in circulation. You will also be able to see their journey through their previous fusions.
-						</Text>
-					</Card>
-				</div>
-			</div>
-			<Footer />
-			<style>
-				{`
+    return (
+        <>
+            <Meta title="Gallery" />
+            <Header />
+            <div className="PageHeader">
+                <div style={{ marginTop: '2rem', marginBottom: '3rem' }}>
+                    <Text h2>Gallery </Text>
+                </div>
+            </div>
+            <Spacer />
+            <div className="PageWrapper">
+                <div className="PageContent">
+                    <Card className="WikiContent">
+                        <Text small>
+                            Your dedicated gallery to view every Titanbornes NFT
+                            in circulation. You will also be able to see their
+                            journey through their previous fusions.
+                        </Text>
+                    </Card>
+                </div>
+            </div>
+            <Footer />
+            <style>
+                {`
 					.card:hover {
 					filter: invert(1);
 						}
@@ -62,9 +64,9 @@ const Gallery = () => {
 						box-sizing: border-box;
 					}
 				`}
-			</style>
-		</>
-	)
+            </style>
+        </>
+    )
 }
 
 export default Gallery

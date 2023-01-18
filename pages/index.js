@@ -39,11 +39,11 @@ const Index = () => {
                         </span>
                     </Text>
                     <Text small>
-                        Titanbornes is a <Badged c="FREE-TO-MINT" />{' '}
-                        experimental NFT Collection trying to do things a little
-                        differently. What if your NFT <Badged c="EVOLVED" /> in
-                        each of your transactions? What if a collection's supply{' '}
-                        <Badged c="DECREMENTED" /> after every transaction?
+                        Titanbornes is an experimental NFT Collection trying to
+                        do things a little differently. What if your NFT{' '}
+                        <Badged c="EVOLVED" /> in each of your transactions?
+                        What if a collection's supply <Badged c="DECREMENTED" />{' '}
+                        after every transaction?
                     </Text>
                 </div>
             </div>
