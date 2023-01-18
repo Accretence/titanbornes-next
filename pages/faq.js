@@ -50,7 +50,7 @@ const FAQ = () => {
                     </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>What is the total supply?</Text>
-                        <Text small>1,000.</Text>
+                        <Text small>10,000.</Text>
                     </Card>
                     <Card mb={1} className="WikiContent">
                         <Text h3>What is the minting price?</Text>
@@ -73,7 +73,7 @@ const FAQ = () => {
                             What are the whitelist & public sale allocations?
                         </Text>
                         <Text small>
-                            All 4,000 tokens will be available to mint by{' '}
+                            All 10,000 tokens will be available to mint by{' '}
                             <Badged c="WHITELISTED" /> members in a 24h window.
                             There is no public mint allocation.
                         </Text>
