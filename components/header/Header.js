@@ -7,23 +7,27 @@ import Submenu from './Submenu'
 import HeaderOptions from './HeaderOptions'
 
 const Header = () => {
-	const theme = useTheme()
+    const theme = useTheme()
 
-	return (
-		<>
-			<nav className="MenuNavigation">
-				<Text mt={1.5} className="MenuNavigationTitle">
-					<Link className="MenuNavigationTitle" href="/">
-						TITANBORNES
-					</Link>
-				</Text>
-				<div>
-					<HeaderOptions />
-				</div>
-			</nav>
-			<Submenu />
-			<style>
-        {`
+    return (
+        <>
+            <nav className="MenuNavigation">
+                <Text mt={1.5} className="MenuNavigationTitle">
+                    <Link
+                        className="MenuNavigationTitle"
+                        href="/"
+                        style={{ color: '#ffd400' }}
+                    >
+                        TITANBORNES
+                    </Link>
+                </Text>
+                <div>
+                    <HeaderOptions />
+                </div>
+            </nav>
+            <Submenu />
+            <style>
+                {`
           .MenuNavigation {
             display: flex;
             align-items: center;
@@ -48,9 +52,9 @@ const Header = () => {
             align-items: center;
           }
         `}
-      </style>
-		</>
-	)
+            </style>
+        </>
+    )
 }
 
 export default Header
