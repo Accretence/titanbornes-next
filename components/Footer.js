@@ -41,6 +41,15 @@ const Footer = () => {
                                         // rel="noopener"
                                         href="/"
                                     >
+                                        Blur [Soon]
+                                    </GeistLink>
+                                </li>
+                                <li>
+                                    <GeistLink
+                                        // target="_blank"
+                                        // rel="noopener"
+                                        href="/"
+                                    >
                                         LooksRare [Soon]
                                     </GeistLink>
                                 </li>
