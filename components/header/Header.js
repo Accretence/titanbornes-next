@@ -13,11 +13,7 @@ const Header = () => {
         <>
             <nav className="MenuNavigation">
                 <Text mt={1.5} className="MenuNavigationTitle">
-                    <Link
-                        className="MenuNavigationTitle"
-                        href="/"
-                        style={{ color: '#ffd400' }}
-                    >
+                    <Link className="MenuNavigationTitle" href="/">
                         TITANBORNES
                     </Link>
                 </Text>
@@ -42,7 +38,7 @@ const Header = () => {
             box-sizing: border-box;
           }
           .MenuNavigationTitle a {
-            color: ${theme.palette.foreground}!important;
+            color: #ffd400;
             font-size: 1.65rem;
             font-weight: 600;
             letter-spacing: 0.3rem;
